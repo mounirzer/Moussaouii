@@ -12,7 +12,7 @@
   }else {
 	    echo "you are not admin";
     }
-$usernm=$_SESSION ['username'];
+//$_SESSION ["username"]=$resul["username"];
 }
-	header("location: ../index.html");
+	header("location: ../index.php");
 ?>

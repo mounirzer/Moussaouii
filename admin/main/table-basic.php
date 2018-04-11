@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Admin|Ajouter Article</title>
+    <title>Admin|Suprimer / Modifier</title>
     <!-- Bootstrap Core CSS -->
     <link href="../assets/node_modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -60,7 +60,7 @@
                         <!-- Logo text --><span>
                          <!-- dark Logo text -->
                          <img src="../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
-                         <!-- Light Logo text -->    
+                         <!-- Light Logo text -->
                          <img src="../assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
                 </div>
                 <!-- ============================================================== -->
@@ -106,22 +106,22 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li> <a class="waves-effect waves-dark" href="index.html" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Accueil</span></a>
+                        <li> <a class="waves-effect waves-dark" href="index.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Accueil</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="pages-profile.html" aria-expanded="false"><i class="fa fa-user-circle-o"></i><span class="hide-menu">Ajouter Article</span></a>
+                        <li> <a class="waves-effect waves-dark" href="pages-profile.php" aria-expanded="false"><i class="fa fa-user-circle-o"></i><span class="hide-menu">Ajouter Article</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="table-basic.html" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Suprimer / Modifier</span></a>
+                        <li> <a class="waves-effect waves-dark" href="table-basic.php" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Suprimer / Modifier</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="icon-fontawesome.html" aria-expanded="false"><i class="fa fa-smile-o"></i><span class="hide-menu">Parametre Actualité</span></a>
+                        <li> <a class="waves-effect waves-dark" href="icon-fontawesome.php" aria-expanded="false"><i class="fa fa-smile-o"></i><span class="hide-menu">Parametre Actualité</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="map-google.html" aria-expanded="false"><i class="fa fa-globe"></i><span class="hide-menu">Map</span></a>
+                        <li> <a class="waves-effect waves-dark" href="map-google.php" aria-expanded="false"><i class="fa fa-globe"></i><span class="hide-menu">Map</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i class="fa fa-bookmark-o"></i><span class="hide-menu">Blank</span></a>
+                        <li> <a class="waves-effect waves-dark" href="pages-blank.php" aria-expanded="false"><i class="fa fa-bookmark-o"></i><span class="hide-menu">Blank</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="pages-error-404.html" aria-expanded="false"><i class="fa fa-question-circle"></i><span class="hide-menu">404</span></a>
+                        <li> <a class="waves-effect waves-dark" href="pages-error-404.php" aria-expanded="false"><i class="fa fa-question-circle"></i><span class="hide-menu">404</span></a>
                         </li>
                     </ul>
-                    
+
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>
@@ -143,13 +143,13 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h3 class="text-themecolor">Ajouter Article</h3>
+                        <h3 class="text-themecolor">Suprimer / Modifier un Article</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0)">Accueil</a></li>
-                            <li class="breadcrumb-item active">Ajouter Article</li>
+                            <li class="breadcrumb-item active">Suprimer / Modifier</li>
                         </ol>
                     </div>
-                    
+
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Bread crumb and right sidebar toggle -->
@@ -157,52 +157,66 @@
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
-                <!-- Row -->
-                
-                    <!-- Column -->
-                    <!-- Column -->
-                    <div class="col-lg-8 col-xlg-9 col-md-7">
+                <div class="row">
+                    <!-- column -->
+                    <div class="col-12">
                         <div class="card">
-                            <!-- Tab panes -->
                             <div class="card-body">
-                                <form class="form-horizontal form-material">
-                                    <div class="form-group">
-                                        <label class="col-md-12">Titre :</label>
-                                        <div class="col-md-12">
-                                            <input type="text" placeholder="Titre d'Article" class="form-control form-control-line">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-12">Type :</label>
-                                        <div class="col-sm-12">
-                                            <select class="form-control form-control-line">
-                                                <option></option>
-                                                <option>Article</option>
-                                                <option>Cour</option>
-                                                <option>TD</option>
-                                                <option>TP</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Article :</label>
-                                        <div class="col-md-12">
-                                            <textarea rows="10" class="form-control form-control-line" placeholder="Texte"></textarea>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <div class="col-sm-12">
-                                            <button class="btn btn-success">Ajouter</button>
-                                        </div>
-                                    </div>
-                                </form>
+                                <h4 class="card-title">Les Articles</h4>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Username</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Deshmukh</td>
+                                                <td>Prohaska</td>
+                                                <td>@Genelia</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Deshmukh</td>
+                                                <td>Gaylord</td>
+                                                <td>@Ritesh</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Sanghani</td>
+                                                <td>Gusikowski</td>
+                                                <td>@Govinda</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Roshan</td>
+                                                <td>Rogahn</td>
+                                                <td>@Hritik</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Joshi</td>
+                                                <td>Hickle</td>
+                                                <td>@Maruti</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Nigam</td>
+                                                <td>Eichmann</td>
+                                                <td>@Sonu</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Column -->
                 </div>
-                <!-- Row -->
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
@@ -213,7 +227,9 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            
+            <footer class="footer">
+                © 2018 Adminwrap by wrappixel.com
+            </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
@@ -240,6 +256,9 @@
     <script src="js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="js/custom.min.js"></script>
+    <!-- jQuery peity -->
+    <script src="../assets/node_modules/peity/jquery.peity.min.js"></script>
+    <script src="../assets/node_modules/peity/jquery.peity.init.js"></script>
 </body>
 
 </html>
