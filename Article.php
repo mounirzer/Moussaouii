@@ -32,7 +32,7 @@
   <header id="header">
     <div class="container-fluid">
       <div id="logo" class="pull-left">
-        <h1><a href="#intro" class="scrollto">Moussaoui Boubaker</a></h1>
+        <h1><a href="#intro" class="scrollto">Moussaoui Boubakeur</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
       </div>
@@ -40,7 +40,7 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="#intro">Home</a></li>
           <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
+          <li><a href="#services">Articles</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -150,7 +150,7 @@
       <div class="container">
 
         <header class="section-header">
-          <h3>Titre Article , Cour , TD , TP</h3>
+          <h3> Articles </h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
         </header>
         <div class="row">
