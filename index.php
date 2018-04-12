@@ -261,8 +261,6 @@
         <a class="cta-btn" href="#">Call To Action</a>
       </div>
     </section><!-- #call-to-action -->
-
-
     <!--==========================
       Contact Section
     ============================-->
