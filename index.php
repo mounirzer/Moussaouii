@@ -147,7 +147,7 @@
     </section><!-- #featured-services -->
 
     <!--==========================
-
+      About Us Section
     ============================-->
     <section id="about">
       <div class="container">
