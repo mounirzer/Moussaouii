@@ -118,6 +118,10 @@
 
                  ?>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a4d950ec6e64c858f5a3eb12d5cce98cc34be3e7
                 </nav>
 
                 <!-- End Sidebar navigation -->
@@ -153,10 +157,7 @@
                         </ol>
                     </div>
 
-<<<<<<< HEAD:admin/main/index.html
-                    
-=======
->>>>>>> 9cabcfa545ab2db6d77edda484aa2aa0272e1338:admin/main/index.php
+
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Bread crumb and right sidebar toggle -->
