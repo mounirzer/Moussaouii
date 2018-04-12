@@ -147,7 +147,7 @@
     </section><!-- #featured-services -->
 
     <!--==========================
-      About Us Section
+
     ============================-->
     <section id="about">
       <div class="container">
@@ -261,8 +261,6 @@
         <a class="cta-btn" href="#">Call To Action</a>
       </div>
     </section><!-- #call-to-action -->
-
-
     <!--==========================
       Contact Section
     ============================-->
