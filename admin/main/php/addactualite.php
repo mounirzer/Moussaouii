@@ -6,8 +6,7 @@ $lien = $_POST["lien"];
 $date = $_POST["date"];
 
 $conn = mysqli_connect("localhost","root","","siteweb");
-mysqli_query($conn,'INSERT into actuallite(titre,contenu,lien,date) value("'.$titre.'","'.$contenu.'","'.$lien.'","'.$date.'")');
-
+mysqli_query($conn,'INSERT INTO actuallite(titre,date,contenu,lien) VALUES ("'.$titre.'","'.$date.'","'.$contenu.'","'.$lien.'")');
 
 header("location: ../actualites.php");
 
