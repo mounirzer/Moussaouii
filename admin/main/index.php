@@ -1,3 +1,14 @@
+<?php
+
+$conn=mysqli_connect('localhost','root','','siteweb');
+$resultat=mysqli_query($conn,'SELECT * FROM admin WHERE id=1');
+
+$row=mysqli_fetch_assoc($resultat);
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -196,52 +207,78 @@
                         <div class="card">
                             <!-- Tab panes -->
                             <div class="card-body">
-                                <form class="form-horizontal form-material">
+                                <form class="form-horizontal form-material" method="POST" action="php/profile.php">
                                     <div class="form-group">
-                                        <label class="col-md-12">Full Name</label>
+                                        <label class="col-md-12">Nom :</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="Johnathan Doe" class="form-control form-control-line">
+                                            <input type="text" name="nom" value="<?php echo $row["nom"]; ?>" class="form-control form-control-line">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="example-email" class="col-md-12">Email</label>
+                                        <label class="col-md-12">Prenom :</label>
                                         <div class="col-md-12">
-                                            <input type="email" placeholder="johnathan@admin.com" class="form-control form-control-line" name="example-email" id="example-email">
+                                            <input type="text" name="prenom" value="<?php echo $row["prenom"]; ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="form-group">
+                                        <label class="col-md-12">Date de Naissance :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" name="date" value="<?php echo $row["date"]; ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">Lieu de Naissance :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" name="lieu" value="<?php echo $row["lieu_de_n"]; ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">Grade :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" name="grade" value="<?php echo $row["grade"]; ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">Secteur :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" name="secteur" value="<?php echo $row["secteur"]; ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">Université :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" name="univ" value="<?php echo $row["univ"]; ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">bio :</label>
+                                        <div class="col-md-12">
+                                            <input  type="text" name="bio" value="<?php echo $row["bio"]; ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="example-email" class="col-md-12">Email :</label>
+                                        <div class="col-md-12">
+                                            <input type="email" name="email" value="<?php echo $row["email"]; ?>" class="form-control form-control-line" id="example-email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">Nom D'utilisateur :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" name="username" value="<?php echo $row["username"]; ?>" class="form-control form-control-line">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-md-12">Password</label>
                                         <div class="col-md-12">
-                                            <input type="password" placeholder ="*********" class="form-control form-control-line">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Phone No</label>
-                                        <div class="col-md-12">
-                                            <input type="text" placeholder="123 456 7890" class="form-control form-control-line">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Message</label>
-                                        <div class="col-md-12">
-                                            <textarea rows="5" class="form-control form-control-line"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-12">Select Country</label>
-                                        <div class="col-sm-12">
-                                            <select class="form-control form-control-line">
-                                                <option>London</option>
-                                                <option>India</option>
-                                                <option>Usa</option>
-                                                <option>Canada</option>
-                                                <option>Thailand</option>
-                                            </select>
+                                            <input type="password" name="pass" value="<?php echo $row["mdp"]; ?>" class="form-control form-control-line">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-sm-12">
-                                            <button class="btn btn-success">Update Profile</button>
+                                            <button class="btn btn-success" type="submit">Métre a jour</button>
                                         </div>
                                     </div>
                                 </form>
