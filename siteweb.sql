@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mer. 11 avr. 2018 à 19:40
+-- Généré le :  sam. 14 avr. 2018 à 00:10
 -- Version du serveur :  10.1.28-MariaDB
 -- Version de PHP :  5.6.32
 
@@ -35,6 +35,15 @@ CREATE TABLE `actuallite` (
   `contenu` text NOT NULL,
   `lien` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `actuallite`
+--
+
+INSERT INTO `actuallite` (`id`, `titre`, `date`, `contenu`, `lien`) VALUES
+(1, 'test', '', 'test', 'test '),
+(2, 'test', '', 'test', 'test '),
+(3, 'lol', '', 'loo', 'mm');
 
 -- --------------------------------------------------------
 
@@ -76,8 +85,22 @@ CREATE TABLE `support` (
   `annee` text NOT NULL,
   `resumer` text NOT NULL,
   `type` varchar(10) NOT NULL,
-  `lien` text NOT NULL
+  `lien` text NOT NULL,
+  `module` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `support`
+--
+
+INSERT INTO `support` (`id`, `nom`, `annee`, `resumer`, `type`, `lien`, `module`) VALUES
+(1, '', '2Ã©me annÃ©e informatique', '', '', '', ''),
+(2, '', '2Ã©me annÃ©e informatique', '', '', '', ''),
+(3, '', '2Ã©me annÃ©e informatique', '', '', '', ''),
+(4, '', '2Ã©me annÃ©e informatique', '', '', '', ''),
+(5, 'mm', '2Ã©me annÃ©e informatique', 'mm', '', 'mm', 'mm'),
+(6, 'mm', '2Ã©me annÃ©e informatique', 'mm', '', 'mm', 'mm'),
+(7, 'mm', '2Ã©me annÃ©e informatique', 'mm', 'Cour', 'mm', 'mm');
 
 --
 -- Index pour les tables déchargées
@@ -110,7 +133,7 @@ ALTER TABLE `support`
 -- AUTO_INCREMENT pour la table `actuallite`
 --
 ALTER TABLE `actuallite`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `admin`
@@ -122,7 +145,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT pour la table `support`
 --
 ALTER TABLE `support`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
