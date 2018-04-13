@@ -7,7 +7,7 @@
                         </li>
                         <li> <a class="waves-effect waves-dark" href="adddoc.php" aria-expanded="false"><i class="fa fa-question-circle"></i><span class="hide-menu">Ajouter Document</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="documents.php" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Suprimer / Mdifier</span></a>
+                        <li> <a class="waves-effect waves-dark" href="documents.php" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Suprimer / Modifier</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="addact.php" aria-expanded="false"><i class="fa fa-globe"></i><span class="hide-menu">Ajouter Actualité</span></a>
                         </li>

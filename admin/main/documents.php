@@ -156,15 +156,18 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Les Articles</h4>
+                                <h4 class="card-title">Documents</h4>
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>Username</th>
+                                                <th>Titre Document</th>
+                                                <th>Anneé</th>
+                                                <th>Module</th>
+                                                <th>Type Document</th>
+                                                <th>Resumer</th>
+                                                <th>Option</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -173,36 +176,84 @@
                                                 <td>Deshmukh</td>
                                                 <td>Prohaska</td>
                                                 <td>@Genelia</td>
+                                                <td>@Genelia</td>
+                                                <td>@Genelia</td>
+                                                <td> <div class="form-group" style="display: inline;" >
+                                        <div class="col-sm-12">
+                                            <button class="btn btn-success" type="submit">suprimer</button>
+                                            <button class="btn btn-success" type="submit">modifier</button>
+                                        </div>
+                                    </div> </td>
                                             </tr>
                                             <tr>
-                                                <td>2</td>
+                                                 <td>2</td>
                                                 <td>Deshmukh</td>
-                                                <td>Gaylord</td>
-                                                <td>@Ritesh</td>
+                                                <td>Prohaska</td>
+                                                <td>@Genelia</td>
+                                                <td>@Genelia</td>
+                                                <td>@Genelia</td>
+                                                <td> <div class="form-group" style="display: inline;" >
+                                        <div class="col-sm-12">
+                                            <button class="btn btn-success" type="submit">suprimer</button>
+                                            <button class="btn btn-success" type="submit">modifier</button>
+                                        </div>
+                                    </div> </td>
                                             </tr>
                                             <tr>
-                                                <td>3</td>
-                                                <td>Sanghani</td>
-                                                <td>Gusikowski</td>
-                                                <td>@Govinda</td>
+                                            <td>3</td>
+                                                <td>Deshmukh</td>
+                                                <td>Prohaska</td>
+                                                <td>@Genelia</td>
+                                                <td>@Genelia</td>
+                                                <td>@Genelia</td>
+                                                <td> <div class="form-group" style="display: inline;" >
+                                        <div class="col-sm-12">
+                                            <button class="btn btn-success" type="submit">suprimer</button>
+                                            <button class="btn btn-success" type="submit">modifier</button>
+                                        </div>
+                                    </div> </td>
                                             </tr>
                                             <tr>
-                                                <td>4</td>
-                                                <td>Roshan</td>
-                                                <td>Rogahn</td>
-                                                <td>@Hritik</td>
+                                               <td>4</td>
+                                                <td>Deshmukh</td>
+                                                <td>Prohaska</td>
+                                                <td>@Genelia</td>
+                                                <td>@Genelia</td>
+                                                <td>@Genelia</td>
+                                                <td> <div class="form-group" style="display: inline;" >
+                                        <div class="col-sm-12">
+                                            <button class="btn btn-success" type="submit">suprimer</button>
+                                            <button class="btn btn-success" type="submit">modifier</button>
+                                        </div>
+                                    </div> </td>
                                             </tr>
                                             <tr>
-                                                <td>5</td>
-                                                <td>Joshi</td>
-                                                <td>Hickle</td>
-                                                <td>@Maruti</td>
+                                               <td>5</td>
+                                                <td>Deshmukh</td>
+                                                <td>Prohaska</td>
+                                                <td>@Genelia</td>
+                                                <td>@Genelia</td>
+                                                <td>@Genelia</td>
+                                                <td> <div class="form-group" style="display: inline;" >
+                                        <div class="col-sm-12">
+                                            <button class="btn btn-success" type="submit">suprimer</button>
+                                            <button class="btn btn-success" type="submit">modifier</button>
+                                        </div>
+                                    </div> </td>
                                             </tr>
                                             <tr>
-                                                <td>6</td>
-                                                <td>Nigam</td>
-                                                <td>Eichmann</td>
-                                                <td>@Sonu</td>
+                                           <td>6</td>
+                                                <td>Deshmukh</td>
+                                                <td>Prohaska</td>
+                                                <td>@Genelia</td>
+                                                <td>@Genelia</td>
+                                                <td>@Genelia</td>
+                                                <td> <div class="form-group" style="display: inline;" >
+                                        <div class="col-sm-12">
+                                            <button class="btn btn-success" type="submit">suprimer</button>
+                                            <button class="btn btn-success" type="submit">modifier</button>
+                                        </div>
+                                    </div> </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -215,6 +266,12 @@
                 <!-- End Right sidebar -->
                 <!-- ============================================================== -->
             </div>
+           
+
+             
+                                   
+
+                                       
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
