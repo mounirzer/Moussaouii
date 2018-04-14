@@ -9,6 +9,6 @@ $lien=$_POST["lien"];
 
 $conn=mysqli_connect('localhost','root','','siteweb');
 mysqli_query($conn,'INSERT INTO support(nom,annee,resumer,type,lien,module) VALUES ("'.$titre.'","'.$annee.'","'.$resumer.'","'.$type.'","'.$lien.'","'.$module.'") ');
-//header("location: ../documents.php");
+header("location: ../documents.php");
 
 ?>
