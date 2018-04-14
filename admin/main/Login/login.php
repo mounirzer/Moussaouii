@@ -9,10 +9,11 @@
   $result = mysqli_num_rows($resul);
 	if($result > 0){
 		  echo"welcome";
+			header("location: ../index.php");
   }else {
 	    echo "you are not admin";
     }
 //$_SESSION ["username"]=$resul["username"];
 }
-	header("location: ../index.php");
+	//
 ?>

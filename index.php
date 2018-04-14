@@ -40,8 +40,8 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="#intro">Accueil</a></li>
           <li><a href="#about">À propos</a></li>
-          <li><a href="#Article">Articles</a></li>
-          <li><a href="#Doc">Documents</a></li>
+          <li><a href="#action">Articles</a></li>
+          <li><a href="#call-to-action">Documents</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -52,21 +52,21 @@
       <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
           <ol class="carousel-indicators"></ol>
           <div class="carousel-inner" role="listbox">
-    <?php //$con = mysqli_connect("localhost", "root", "", "siteweb");
-     //$sql = "SELECT * FROM actuallite";
-    // $result = mysqli_query($con, $sql);$i=0;
-    // while($row = mysqli_fetch_assoc($result)){$i=$i+1;?>
-          <div class="carousel-item active">
-            <div class="carousel-background"><img src="img/intro-carousel/<?php //echo $i;?>1.jpg" alt=""></div>
+    <?php $con = mysqli_connect("localhost", "root", "", "siteweb");
+     $sql = "SELECT * FROM actuallite";
+    $result = mysqli_query($con, $sql);$i=0;
+     while($row = mysqli_fetch_assoc($result)){$i=$i+1;?>
+          <div class="carousel-item <?php if ($i==1) {echo "active";}?>">
+            <div class="carousel-background"><img src="img/intro-carousel/<?php echo $i;?>.jpg" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>We are professional</h2>
-                    <p><?php// echo $row["contenu"]; ?></p>
-                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+                <h2><?php echo $row["titre"]; ?></h2>
+                    <p><?php echo $row["contenu"]; ?></p>
+                <!--a href="#featured-services" class="btn-get-started scrollto">Get Started</a-->
               </div>
             </div>
          </div>
-            <?php// } ?>
+            <?php } ?>
       </div>
         <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
@@ -205,21 +205,21 @@
     <!--==========================
       Call To Action Section
     ============================-->
-    <section id="call-to-action" class="wow fadeIn">
+    <section id="action" class="wow fadeIn action1">
       <div class="container text-center">
-        <h3>Call To Action</h3>
+        <h3>Articles</h3>
         <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <a class="cta-btn" href="#">Call To Action</a>
+        <a class="cta-btn" href="Article.php">Lire la suite</a>
       </div>
     </section><!-- #call-to-action -->
     <!--==========================
       Call To Action Section 2
     ============================-->
-    <section id="call-to-action" class="wow fadeIn">
+    <section id="call-to-action" class="wow fadeIn action2">
       <div class="container text-center">
-        <h3>Call To Action</h3>
+        <h3>Documents</h3>
         <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <a class="cta-btn" href="#">Call To Action</a>
+        <a class="cta-btn" href="documents.php">Lire la suite</a>
       </div>
     </section><!-- #call-to-action -->
     <!--==========================
