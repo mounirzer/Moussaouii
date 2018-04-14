@@ -144,6 +144,11 @@
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
+                <?php
+$conn=mysqli_connect('localhost','root','','siteweb');
+$resultat=mysqli_query($conn,"SELECT * From support WHERE type='article' ");
+$i=0;
+?>
                 <div class="row">
                     <!-- column -->
                     <div class="col-12">
@@ -156,84 +161,31 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>Titre</th>
-                                                <th>Type</th>
-                                                <th>Article</th>
-                                                 <th>Option</th>
+                                                <th>Annee</th>
+                                                <th>Module</th>
+                                                 <th>Resumer</th>
+                                                <th>lien</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                        <?php  while($row=mysqli_fetch_assoc($resultat)){    ?>
                                             <tr>
-                                                <td>1</td>
-                                                <td>Deshmukh</td>
-                                                <td>Prohaska</td>
-                                                <td>@Genelia</td>
+                                                <td><?php $i=$i+1;  echo $i; ?></td>
+                                                <td><?php   echo $row["nom"]; ?></td>
+                                                <td><?php   echo $row["annee"]; ?></td>
+                                                <td><?php   echo $row["module"]; ?></td>
+                                                <td><?php  echo $row["resumer"]; ?></td>
+                                                <td><?php   echo $row["lien"]; ?></td>
+
                                                         <td> <div class="form-group" style="display: inline;" >
                                         <div class="col-sm-12">
-                                            <button class="btn btn-success" type="submit">suprimer</button>
-                                            <button class="btn btn-success" type="submit">modifier</button>
+                                            <a href="php/suparticle.php?id=<?php echo $row["id"] ?>">Suprimer</a>
+                                            <a href="modarticle.php?id=<?php echo $row["id"] ?>">Modifier</a>
                                         </div>
                                     </div> </td>
                                             </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Deshmukh</td>
-                                                <td>Gaylord</td>
-                                                <td>@Ritesh</td>
-                                                        <td> <div class="form-group" style="display: inline;" >
-                                        <div class="col-sm-12">
-                                            <button class="btn btn-success" type="submit">suprimer</button>
-                                            <button class="btn btn-success" type="submit">modifier</button>
-                                        </div>
-                                    </div> </td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Sanghani</td>
-                                                <td>Gusikowski</td>
-                                                <td>@Govinda</td>
-                                                        <td> <div class="form-group" style="display: inline;" >
-                                        <div class="col-sm-12">
-                                            <button class="btn btn-success" type="submit">suprimer</button>
-                                            <button class="btn btn-success" type="submit">modifier</button>
-                                        </div>
-                                    </div> </td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td>Roshan</td>
-                                                <td>Rogahn</td>
-                                                <td>@Hritik</td>
-                                                        <td> <div class="form-group" style="display: inline;" >
-                                        <div class="col-sm-12">
-                                            <button class="btn btn-success" type="submit">suprimer</button>
-                                            <button class="btn btn-success" type="submit">modifier</button>
-                                        </div>
-                                    </div> </td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td>Joshi</td>
-                                                <td>Hickle</td>
-                                                <td>@Maruti</td>
-                                                        <td> <div class="form-group" style="display: inline;" >
-                                        <div class="col-sm-12">
-                                            <button class="btn btn-success" type="submit">suprimer</button>
-                                            <button class="btn btn-success" type="submit">modifier</button>
-                                        </div>
-                                    </div> </td>
-                                            </tr>
-                                            <tr>
-                                                <td>6</td>
-                                                <td>Nigam</td>
-                                                <td>Eichmann</td>
-                                                <td>@Sonu</td>
-                                                        <td> <div class="form-group" style="display: inline;" >
-                                        <div class="col-sm-12">
-                                            <button class="btn btn-success" type="submit">suprimer</button>
-                                            <button class="btn btn-success" type="submit">modifier</button>
-                                        </div>
-                                    </div> </td>
-                                            </tr>
+                                    <?php    }     ?>
+
                                         </tbody>
                                     </table>
                                 </div>

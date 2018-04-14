@@ -143,6 +143,13 @@
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
+                
+<?php
+$i=0;
+$conn=mysqli_connect('localhost','root','','siteweb');
+$resultat=mysqli_query($conn,'SELECT * From actuallite ');
+?>
+
                 <div class="row">
                     <!-- column -->
                     <div class="col-12">
@@ -159,78 +166,32 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>Titre</th>
-                                                <th>Description</th>
                                                 <th>Date</th>
-                                                 <th>Lien</th>
-                                                 <th>Option</th>
+                                                <th>Contenu</th>
+                                                 <th>lien</th>
                                             </tr>
                                         </thead>
+
+
                                         <tbody>
+                                            <?php  while($row=mysqli_fetch_assoc($resultat)){    ?>
                                             <tr>
-                                                <td>1</td>
-                                                <td>Deshmukh</td>
-                                                <td>Prohaska</td>
-                                                <td>@Genelia</td>
-                                                <td>@Genelia</td>
+
+                                                <td><?php $i=$i+1;  echo $i; ?></td>
+                                                <td><?php $i=1;  echo $row["titre"]; ?></td>
+                                                <td><?php $i=1;  echo $row["date"]; ?></td>
+                                                <td><?php $i=1;  echo $row["contenu"]; ?></td>
+                                                <td><?php $i=1;  echo $row["lien"]; ?></td>
+
                                                               <td> <div class="form-group" style="display: inline;" >
+                                    
                                         <div class="col-sm-12">
-                                            <button class="btn btn-success" type="submit">suprimer</button>
-                                            <button class="btn btn-success" type="submit">modifier</button>
+                                            <a href="php/supactualite.php?id=<?php echo $row["id"] ?>">Suprimer</a>
+                                            <a href="modactualite.php?id=<?php echo $row["id"] ?>">Modifier</a>
                                         </div>
                                     </div> </td>
                                             </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                    <td>Deshmukh</td>
-                                                <td>Prohaska</td>
-                                                <td>@Genelia</td>
-                                                <td>@Genelia</td>
-                                                              <td> <div class="form-group" style="display: inline;" >
-                                        <div class="col-sm-12">
-                                            <button class="btn btn-success" type="submit">suprimer</button>
-                                            <button class="btn btn-success" type="submit">modifier</button>
-                                        </div>
-                                    </div> </td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                  <td>Deshmukh</td>
-                                                <td>Prohaska</td>
-                                                <td>@Genelia</td>
-                                                <td>@Genelia</td>
-                                                              <td> <div class="form-group" style="display: inline;" >
-                                        <div class="col-sm-12">
-                                            <button class="btn btn-success" type="submit">suprimer</button>
-                                            <button class="btn btn-success" type="submit">modifier</button>
-                                        </div>
-                                    </div> </td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td>Deshmukh</td>
-                                                <td>Prohaska</td>
-                                                <td>@Genelia</td>
-                                                <td>@Genelia</td>
-                                                              <td> <div class="form-group" style="display: inline;" >
-                                        <div class="col-sm-12">
-                                            <button class="btn btn-success" type="submit">suprimer</button>
-                                            <button class="btn btn-success" type="submit">modifier</button>
-                                        </div>
-                                    </div> </td>
-                                            </tr>
-                                              <tr>
-                                                <td>5</td>
-                                               <td>Deshmukh</td>
-                                                <td>Prohaska</td>
-                                                <td>@Genelia</td>
-                                                <td>@Genelia</td>
-                                                              <td> <div class="form-group" style="display: inline;" >
-                                        <div class="col-sm-12">
-                                            <button class="btn btn-success" type="submit">suprimer</button>
-                                            <button class="btn btn-success" type="submit">modifier</button>
-                                        </div>
-                                    </div> </td>
-                                            </tr>
+                                        <?php    }     ?>
                                         </tbody>
                                     </table>
                                 </div>

@@ -1,6 +1,17 @@
+
+<?php
+
+$id=$_GET["id"];
+
+$conn=mysqli_connect('localhost','root','','siteweb');
+$resultat=mysqli_query($conn,'SELECT * From actuallite where id= '.$id);
+$row=mysqli_fetch_assoc($resultat);
+
+?>
+
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Tell the browser to be responsive to screen width -->
@@ -9,13 +20,13 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Admin | Ajouter Document</title>
+    <title>Admin | Modifier Actualité</title>
     <!-- Bootstrap Core CSS -->
     <link href="../assets/node_modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
     <!-- page css -->
-    <link href="css/pages/google-vector-map.css" rel="stylesheet">
+    <link href="css/pages/icon-page.css" rel="stylesheet">
     <!-- You can change the theme colors from here -->
     <link href="css/colors/default.css" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -32,10 +43,13 @@
             <div class="loader__figure"></div>
             <p class="loader__label">Admin | Boubaker</p>
         </div>
-    </div><!-- Main wrapper - style you can find in pages.scss -->
-    <div id="main-wrapper"><!-- Topbar header - style you can find in pages.scss -->
+    </div>
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <div id="main-wrapper">
+        <!-- Topbar header - style you can find in pages.scss -->
         <header class="topbar">
-            <nav class="navbar top-navbar navbar-expand-md navbar-light">  <!-- Logo -->
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <!-- Logo -->
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">
                         <!-- Logo icon --><b>
@@ -62,17 +76,16 @@
                             <form class="app-search">
                                 <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="fa fa-times"></i></a> </form>
                         </li>
-                    </ul>
-                    <!-- User profile and search -->
-                    <ul class="navbar-nav my-lg-0">
-                        <!-- Profile -->
+                    </ul><!-- User profile and search -->
+                    <ul class="navbar-nav my-lg-0"><!-- Profile -->
                         <li class="nav-item dropdown u-pro">
                             <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="" /> <span class="hidden-md-down">Moussaoui Boubaker &nbsp;</span> </a>
                         </li>
                     </ul>
                 </div>
             </nav>
-        </header><!-- End Topbar header --><!-- Left Sidebar - style you can find in sidebar.scss  -->
+        </header><!-- End Topbar header -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <aside class="left-sidebar">
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar">
@@ -81,85 +94,90 @@
                     <?php
                         include_once("aside.php");
                  ?>
-                </nav><!-- End Sidebar navigation -->
-            </div><!-- End Sidebar scroll-->
-        </aside><!-- End Left Sidebar - style you can find in sidebar.scss  --><!-- Page wrapper  -->
-        <div class="page-wrapper">  <!-- Container fluid  -->
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- Page wrapper  -->
+        <div class="page-wrapper">
+            <!-- Container fluid  -->
             <div class="container-fluid">
+                <!-- Bread crumb and right sidebar toggle -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h3 class="text-themecolor">Ajouter Document</h3>
+                        <h3 class="text-themecolor">Modifier Actualité</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0)">Accueil</a></li>
-                            <li class="breadcrumb-item active">Ajouter Document</li>
+                            <li class="breadcrumb-item active">Suprimer / Modifier</li>
                         </ol>
                     </div>
-                </div> <!-- Bread crumb and right sidebar toggle -->
-                <div class="col-lg-8 col-xlg-9 col-md-7">
-                        <div class="card"><!-- Tab panes -->
+                </div>
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- Start Page Content -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
                             <div class="card-body">
-                                <form class="form-horizontal form-material" method="POST" action="php/adddocument.php">
-                                    <div class="form-group">
-                                        <label class="col-md-12">Titre Document:</label>
-                                        <div class="col-md-12">
-                                            <input type="text" placeholder="Titre " name="titre" class="form-control form-control-line">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-12" >Année :</label>
-                                        <div class="col-sm-12">
-                                            <select class="form-control form-control-line" name="annee">
-                                                <option>2éme année informatique</option>
-                                                <option>3éme année (Décisionnelle)</option>
-                                                <option>Master (Décisionnelle)</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Module Document:</label>
-                                        <div class="col-md-12">
-                                            <input type="text" placeholder="Module " name="module" class="form-control form-control-line">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-12">Type Document:</label>
-                                        <div class="col-sm-12">
-                                            <select class="form-control form-control-line" name="type" >
-                                                <option>Cour</option>
-                                                <option>TD</option>
-                                                <option>TP</option>
-                                                <option>TP</option>
-                                                <option>examen</option>
+                                <h4 class="card-title">Actualité :</h4>
+                    <div class="col-lg-8 col-xlg-9 col-md-7">
+                        <div class="card">
+                            <!-- Tab panes -->
+                            <div class="card-body">
+                                <form class="form-horizontal form-material" method="POST" action="php/modactualite.php?id=<?php echo $id; ?>">
+                                      <div class="form-group">
+                                        <label class="col-sm-12"></label>
 
-                                            </select>
-                                        </div>
-                                    </div>
                                     <div class="form-group">
-                                        <label class="col-md-12">Résumer :</label>
+                                        <label class="col-md-12">Titre :</label>
                                         <div class="col-md-12">
-                                            <textarea rows="10" class="form-control form-control-line" name="resumer" placeholder="Texte"></textarea>
+                                            <input type="text" value="<?php echo $row["titre"] ?>" class="form-control form-control-line" name="titre">
                                         </div>
                                     </div>
-                                    <label class="col-md-12">Lien Document :</label>
+
+                                    <div class="form-group">
+                                        <label class="col-md-12">Descpription :</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="exemple.com" name="lien" class="form-control form-control-line">
+                                            <input rows="10" value="<?php echo $row["contenu"] ?>" class="form-control form-control-line" name="contenu"></input>
                                         </div>
-                                       </br>
+                                    </div>
+                                       <div class="form-group">
+                                        <label class="col-md-12">date</label>
+                                        <div class="col-md-12">
+                                            <input type="text" value="<?php echo $row["date"] ?>" class="form-control form-control-line" name="date">
+                                        </div>
+                                    </br>
+                                    <div>
+                                        <label class="col-md-12">Lien :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" value="<?php echo $row["lien"] ?>" class="form-control form-control-line" name="lien">
+                                        </div>
+                                    </div>
+
                                     <div class="form-group">
                                         <div class="col-sm-12">
-                                            <button class="btn btn-success" type="submit" >Ajouter</button>
+                                            <button class="btn btn-success" type="submit">Modifier</button>
                                         </div>
                                     </div>
+                                      
                                 </form>
                             </div>
                         </div>
-                    </div> <!-- End PAge Content -->
-            </div><!-- End Container fluid  --><!-- footer -->
-            <footer class="footer">
-                © 2018 Admin
-            </footer><!-- End footer -->
-        </div><!-- End Page wrapper  -->
-    </div> <!-- End Wrapper --><!-- All Jquery -->
+                    </div>
+                    <!-- Column -->
+                </div>
+                <!-- End PAge Content -->
+            </div>
+            <!-- End Container fluid  -->
+            <!-- footer -->
+            </div>
+            <footer>CSMI|MOUSSAOUI BOUBAKER </footer>  <!-- End footer -->
+        </div>
+        <!-- End Page wrapper  -->
+    </div>
+    <!-- End Wrapper -->
+    <!-- All Jquery -->
     <script src="../assets/node_modules/jquery/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="../assets/node_modules/bootstrap/js/popper.min.js"></script>
@@ -172,9 +190,5 @@
     <script src="js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="js/custom.min.js"></script>
-    <!-- google maps api -->
-    <script src="https://maps.google.com/maps/api/js?key=AIzaSyCUBL-6KdclGJ2a_UpmB2LXvq7VOcPT7K4&sensor=true"></script>
-    <script src="../assets/node_modules/gmaps/gmaps.min.js"></script>
-    <script src="../assets/node_modules/gmaps/jquery.gmaps.js"></script>
 </body>
 </html>

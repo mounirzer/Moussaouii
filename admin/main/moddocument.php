@@ -1,3 +1,14 @@
+
+<?php 
+
+$id=$_GET["id"];
+$conn=mysqli_connect('localhost','root','','siteweb');
+$resultat=mysqli_query($conn,"SELECT * From support where id=".$id);
+$row=mysqli_fetch_assoc($resultat);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,11 +109,11 @@
                 <div class="col-lg-8 col-xlg-9 col-md-7">
                         <div class="card"><!-- Tab panes -->
                             <div class="card-body">
-                                <form class="form-horizontal form-material" method="POST" action="php/adddocument.php">
+                                <form class="form-horizontal form-material" method="POST" action="php/moddocument.php?id=<?php echo $row["id"] ?>">
                                     <div class="form-group">
                                         <label class="col-md-12">Titre Document:</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="Titre " name="titre" class="form-control form-control-line">
+                                            <input type="text" value="<?php echo $row["nom"] ?>" name="titre" class="form-control form-control-line">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -118,7 +129,7 @@
                                     <div class="form-group">
                                         <label class="col-md-12">Module Document:</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="Module " name="module" class="form-control form-control-line">
+                                            <input type="text" value="<?php echo $row["module"] ?>" name="module" class="form-control form-control-line">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -137,17 +148,17 @@
                                     <div class="form-group">
                                         <label class="col-md-12">Résumer :</label>
                                         <div class="col-md-12">
-                                            <textarea rows="10" class="form-control form-control-line" name="resumer" placeholder="Texte"></textarea>
+                                            <input rows="10" class="form-control form-control-line" name="resumer" value="<?php echo $row["resumer"] ?>"></input>
                                         </div>
                                     </div>
                                     <label class="col-md-12">Lien Document :</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="exemple.com" name="lien" class="form-control form-control-line">
+                                            <input type="text" value="<?php echo $row["lien"] ?>" name="lien" class="form-control form-control-line">
                                         </div>
                                        </br>
                                     <div class="form-group">
                                         <div class="col-sm-12">
-                                            <button class="btn btn-success" type="submit" >Ajouter</button>
+                                            <button class="btn btn-success" type="submit" >Modifier</button>
                                         </div>
                                     </div>
                                 </form>

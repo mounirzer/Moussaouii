@@ -192,8 +192,8 @@ $row=mysqli_fetch_assoc($resultat);
                         <div class="card">
                             <div class="card-body">
                                 <center class="m-t-30"> <img src="../assets/images/users/5.jpg" class="img-circle" width="100" />
-                                    <h4 class="card-title m-t-10">Moussaoui Boubaker</h4>
-                                    <h6 class="card-subtitle">Accoubts Manager Amix corp</h6>
+                                    <h4 class="card-title m-t-10"><?php echo $row["nom"]; echo " "; echo $row["prenom"];  ?></h4>
+                                    <h6 class="card-subtitle"><?php echo $row["bio"]; ?></h6>
                                     <div class="row text-center justify-content-md-center">
                                         
                                     </div>

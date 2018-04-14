@@ -152,38 +152,51 @@
                         <div class="card">
                             <!-- Tab panes -->
                             <div class="card-body">
-                                <form class="form-horizontal form-material">
+                                
+<form class="form-horizontal form-material" method="POST" action="php/addarticles.php">
                                     <div class="form-group">
                                         <label class="col-md-12">Titre :</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="Titre d'Article" class="form-control form-control-line" name="titre">
+                                            <input type="text" placeholder="Titre " name="titre" class="form-control form-control-line">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-sm-12">Type :</label>
+                                        <label class="col-sm-12" >Année :</label>
                                         <div class="col-sm-12">
-                                            <select class="form-control form-control-line" name="type">
-                                                <option></option>
-                                                <option>Article</option>
-                                                <option>Cour</option>
-                                                <option>TD</option>
-                                                <option>TP</option>
+                                            <select class="form-control form-control-line" name="annee">
+                                                <option>- -</option>
+                                                <option>2éme année informatique</option>
+                                                <option>3éme année (Décisionnelle)</option>
+                                                <option>Master (Décisionnelle)</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-md-12">Article :</label>
+                                        <label class="col-md-12">Module :</label>
                                         <div class="col-md-12">
-                                            <textarea rows="10" class="form-control form-control-line" placeholder="Texte"></textarea>
+                                            <input type="text" placeholder="Module " name="module" class="form-control form-control-line">
                                         </div>
                                     </div>
                                     
                                     <div class="form-group">
+                                        <label class="col-md-12">Résumer :</label>
+                                        <div class="col-md-12">
+                                            <textarea rows="10" class="form-control form-control-line" name="resumer" placeholder="Texte"></textarea>
+                                        </div>
+                                    </div>
+                                    <label class="col-md-12">Lien :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="exemple.com" name="lien" class="form-control form-control-line">
+                                        </div>
+                                       </br>
+                                    <div class="form-group">
                                         <div class="col-sm-12">
-                                            <button class="btn btn-success">Ajouter</button>
+                                            <button class="btn btn-success" type="submit" >Ajouter</button>
                                         </div>
                                     </div>
                                 </form>
+
+
                             </div>
                         </div>
                     </div>

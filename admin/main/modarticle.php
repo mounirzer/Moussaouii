@@ -1,5 +1,19 @@
+
+
+<?php
+
+$id=$_GET["id"];
+
+$conn=mysqli_connect('localhost','root','','siteweb');
+$resultat=mysqli_query($conn,'SELECT * From support where id='.$id);
+$row=mysqli_fetch_assoc($resultat);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +23,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Admin | Suprimer / Modifier</title>
+    <title>Admin|Ajouter Article</title>
     <!-- Bootstrap Core CSS -->
     <link href="../assets/node_modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -23,6 +37,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
+
 <body class="fix-header card-no-border fix-sidebar">
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
@@ -58,7 +73,7 @@
                         <!-- Logo text --><span>
                          <!-- dark Logo text -->
                          <img src="../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
-                         <!-- Light Logo text -->
+                         <!-- Light Logo text -->    
                          <img src="../assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
                 </div>
                 <!-- ============================================================== -->
@@ -69,7 +84,6 @@
                     <!-- toggle and nav items -->
                     <!-- ============================================================== -->
                     <ul class="navbar-nav mr-auto">
-                        <!-- This is  -->
                         <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" href="javascript:void(0)"><i class="fa fa-bars"></i></a> </li>
                         <!-- ============================================================== -->
                         <!-- Search -->
@@ -104,9 +118,10 @@
             <div class="scroll-sidebar">
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
-                    <?php
+                    <?php    
                         include_once("aside.php");
-                    ?>
+                 ?>
+                    
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>
@@ -128,12 +143,13 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h3 class="text-themecolor">Suprimer / Modifier</h3>
+                        <h3 class="text-themecolor">Ajouter Article</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0)">Accueil</a></li>
-                            <li class="breadcrumb-item active">Suprimer / Modifier</li>
+                            <li class="breadcrumb-item active">Ajouter Article</li>
                         </ol>
                     </div>
+                    
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Bread crumb and right sidebar toggle -->
@@ -141,84 +157,76 @@
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
-
-                <!-- ============================================================== -->
-                <!-- End PAge Content -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Right sidebar -->
-                <!-- ============================================================== -->
-                <!-- .right-sidebar -->
+                <!-- Row -->
                 
-                <?php
-$i=0;
-$conn=mysqli_connect('localhost','root','','siteweb');
-$resultat=mysqli_query($conn,"SELECT * From support WHERE type!='article'");
-?>
-
-                <div class="row">
-                    <!-- column -->
-                    <div class="col-12">
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-lg-8 col-xlg-9 col-md-7">
                         <div class="card">
+                            <!-- Tab panes -->
                             <div class="card-body">
-                                <h4 class="card-title">Documents</h4>
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Titre Document</th>
-                                                <th>Anneé</th>
-                                                <th>Module</th>
-                                                <th>Type Document</th>
-                                                <th>Option</th>
-
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        <?php  while($row=mysqli_fetch_assoc($resultat)){    ?>
-                                            <tr>
-                                                <td><?php $i=$i+1;  echo $i; ?></td>
-                                                <td><?php  echo $row["nom"]; ?></td>
-                                                <td><?php  echo $row["annee"]; ?></td>
-                                                <td><?php  echo $row["module"]; ?></td>
-                                                <td><?php  echo $row["type"]; ?></td>
-
-
-                                                <td> <div class="form-group" style="display: inline;" >
-                                        <div class="col-sm-12">
-                                            <a href="php/supdocument.php?id=<?php echo $row["id"] ?>">Suprimer</a>
-                                            <a href="moddocument.php?id=<?php echo $row["id"] ?>">Modifier</a>
+                                
+<form class="form-horizontal form-material" method="POST" action="php/modarticle.php?id=<?php echo $row["id"]; ?>">
+                                    <div class="form-group">
+                                        <label class="col-md-12">Titre :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" value="<?php echo $row["nom"]; ?>" name="titre" class="form-control form-control-line">
                                         </div>
-                                    </div> </td>
-                                            </tr>
-                                    <?php    }     ?>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-12" >Année :</label>
+                                        <div class="col-sm-12">
+                                            <select class="form-control form-control-line" name="annee">
+                                                <option>- -</option>
+                                                <option>2éme année informatique</option>
+                                                <option>3éme année (Décisionnelle)</option>
+                                                <option>Master (Décisionnelle)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">Module :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" value="<?php echo $row["module"]; ?>" name="module" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="col-md-12">Résumer :</label>
+                                        <div class="col-md-12">
+                                            <input rows="10" value="<?php echo $row["resumer"]; ?>"  class="form-control form-control-line" name="resumer" placeholder="Texte"></input>
+                                        </div>
+                                    </div>
+                                    <label class="col-md-12">Lien :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" value="<?php echo $row["lien"] ?>" placeholder="exemple.com" name="lien" class="form-control form-control-line">
+                                        </div>
+                                       </br>
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <button class="btn btn-success" type="submit" >Ajouter</button>
+                                        </div>
+                                    </div>
+                                </form>
+
+
                             </div>
                         </div>
                     </div>
+                    <!-- Column -->
                 </div>
+                <!-- Row -->
                 <!-- ============================================================== -->
-                <!-- End Right sidebar -->
+                <!-- End PAge Content -->
                 <!-- ============================================================== -->
             </div>
-           
-
-             
-                                   
-
-                                       
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer">
-                © 2018 Adminwrap by wrappixel.com
-            </footer>
+            
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
