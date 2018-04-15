@@ -1,14 +1,8 @@
 <?php
-
 $titre=$_POST["titre"];
-$annee=$_POST["annee"];
-$module=$_POST["module"];
-$type='article';
 $resumer=$_POST["resumer"];
 $lien=$_POST["lien"];
-
 $conn=mysqli_connect('localhost','root','','siteweb');
-mysqli_query($conn,'INSERT INTO support(nom,annee,resumer,type,lien,module) VALUES ("'.$titre.'","'.$annee.'","'.$resumer.'","'.$type.'","'.$lien.'","'.$module.'") ');
+mysqli_query($conn,'INSERT INTO article(titreart,resumeart,lienart) VALUES ("'.$titre.'","'.$resumer.'","'.$lien.'") ');
 header("location: ../articles.php");
-
 ?>

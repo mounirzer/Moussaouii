@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,7 +23,6 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-
 <body class="fix-header card-no-border fix-sidebar">
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
@@ -105,10 +103,9 @@
             <div class="scroll-sidebar">
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
-                    <?php    
+                    <?php
                         include_once("aside.php");
                  ?>
-
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>
@@ -136,7 +133,6 @@
                             <li class="breadcrumb-item active">Suprimer / Modifier</li>
                         </ol>
                     </div>
-
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Bread crumb and right sidebar toggle -->
@@ -145,10 +141,10 @@
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
                 <?php
-$conn=mysqli_connect('localhost','root','','siteweb');
-$resultat=mysqli_query($conn,"SELECT * From support WHERE type='article' ");
-$i=0;
-?>
+              $conn=mysqli_connect('localhost','root','','siteweb');
+              $resultat=mysqli_query($conn,"SELECT * From  article ");
+               $i=0;
+               ?>
                 <div class="row">
                     <!-- column -->
                     <div class="col-12">
@@ -161,9 +157,7 @@ $i=0;
                                             <tr>
                                                 <th>#</th>
                                                 <th>Titre</th>
-                                                <th>Annee</th>
-                                                <th>Module</th>
-                                                 <th>Resumer</th>
+                                               <th>Resumer</th>
                                                 <th>lien</th>
                                             </tr>
                                         </thead>
@@ -171,21 +165,17 @@ $i=0;
                                         <?php  while($row=mysqli_fetch_assoc($resultat)){    ?>
                                             <tr>
                                                 <td><?php $i=$i+1;  echo $i; ?></td>
-                                                <td><?php   echo $row["nom"]; ?></td>
-                                                <td><?php   echo $row["annee"]; ?></td>
-                                                <td><?php   echo $row["module"]; ?></td>
-                                                <td><?php  echo $row["resumer"]; ?></td>
-                                                <td><?php   echo $row["lien"]; ?></td>
-
+                                                <td><?php   echo $row["titreart"]; ?></td>
+                                                <td><?php   echo $row["resumeart"]; ?></td>
+                                                <td><?php   echo $row["lienart"]; ?></td>
                                                         <td> <div class="form-group" style="display: inline;" >
                                         <div class="col-sm-12">
-                                            <a href="php/suparticle.php?id=<?php echo $row["id"] ?>">Suprimer</a>
-                                            <a href="modarticle.php?id=<?php echo $row["id"] ?>">Modifier</a>
+                                            <a href="php/suparticle.php?id=<?php echo $row["id_article"] ?>">Suprimer</a>
+                                            <a href="modarticle.php?id=<?php echo $row["id_article"] ?>">Modifier</a>
                                         </div>
                                     </div> </td>
                                             </tr>
                                     <?php    }     ?>
-
                                         </tbody>
                                     </table>
                                 </div>
@@ -236,5 +226,4 @@ $i=0;
     <script src="../assets/node_modules/peity/jquery.peity.min.js"></script>
     <script src="../assets/node_modules/peity/jquery.peity.init.js"></script>
 </body>
-
 </html>

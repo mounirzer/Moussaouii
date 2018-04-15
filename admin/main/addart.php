@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,7 +23,6 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-
 <body class="fix-header card-no-border fix-sidebar">
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
@@ -60,7 +58,7 @@
                         <!-- Logo text --><span>
                          <!-- dark Logo text -->
                          <img src="../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
-                         <!-- Light Logo text -->    
+                         <!-- Light Logo text -->
                          <img src="../assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
                 </div>
                 <!-- ============================================================== -->
@@ -105,10 +103,9 @@
             <div class="scroll-sidebar">
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
-                    <?php    
+                    <?php
                         include_once("aside.php");
                  ?>
-                    
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>
@@ -136,7 +133,6 @@
                             <li class="breadcrumb-item active">Ajouter Article</li>
                         </ol>
                     </div>
-                    
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Bread crumb and right sidebar toggle -->
@@ -145,40 +141,20 @@
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
                 <!-- Row -->
-                
                     <!-- Column -->
                     <!-- Column -->
                     <div class="col-lg-8 col-xlg-9 col-md-7">
                         <div class="card">
                             <!-- Tab panes -->
                             <div class="card-body">
-                                
-<form class="form-horizontal form-material" method="POST" action="php/addarticles.php">
+                          <form class="form-horizontal form-material" method="POST" action="php/addarticles.php">
                                     <div class="form-group">
                                         <label class="col-md-12">Titre :</label>
                                         <div class="col-md-12">
                                             <input type="text" placeholder="Titre " name="titre" class="form-control form-control-line">
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-12" >Année :</label>
-                                        <div class="col-sm-12">
-                                            <select class="form-control form-control-line" name="annee">
-                                                <option>- -</option>
-                                                <option>2éme année informatique</option>
-                                                <option>3éme année (Décisionnelle)</option>
-                                                <option>Master (Décisionnelle)</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Module :</label>
-                                        <div class="col-md-12">
-                                            <input type="text" placeholder="Module " name="module" class="form-control form-control-line">
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="form-group">
+                                  <div class="form-group">
                                         <label class="col-md-12">Résumer :</label>
                                         <div class="col-md-12">
                                             <textarea rows="10" class="form-control form-control-line" name="resumer" placeholder="Texte"></textarea>
@@ -195,8 +171,6 @@
                                         </div>
                                     </div>
                                 </form>
-
-
                             </div>
                         </div>
                     </div>
@@ -213,7 +187,7 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            
+
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
@@ -241,5 +215,4 @@
     <!--Custom JavaScript -->
     <script src="js/custom.min.js"></script>
 </body>
-
 </html>

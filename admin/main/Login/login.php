@@ -7,13 +7,13 @@
 	//$sql = ;
 	$resul = mysqli_query($conn, " SELECT * FROM admin WHERE username='$user' AND mdp = '$password' ");
   $result = mysqli_num_rows($resul);
-	if($result > 0){
+	if($result == 1 ){
 		  echo"welcome";
+			$_SESSION ["username"]=$user;
 			header("location: ../index.php");
   }else {
-	    echo "you are not admin";
+	    header("location: ../login.php");
     }
-//$_SESSION ["username"]=$resul["username"];
 }
 	//
 ?>

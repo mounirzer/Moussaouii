@@ -78,7 +78,6 @@
         </a>
       </div>
     </div>
-
   </section><!-- #intro -->
   <main id="main">
     <!--==========================
@@ -89,24 +88,22 @@
         <div class="row">
           <div class="col-lg-4 box">
             <i class="ion-ios-bookmarks-outline"></i>
-            <h4 class="title"><a href="">2éme année info</a></h4>
+            <h4 class="title"><a href="document.php?an=2">2éme année info</a></h4>
             <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
           </div>
           <div class="col-lg-4 box box-bg">
             <i class="ion-ios-bookmarks-outline"></i>
-            <h4 class="title"><a href="">3éme année (Décisionnelle)</a></h4>
+            <h4 class="title"><a href="document.php?an=3">3éme année (Décisionnelle)</a></h4>
             <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
           </div>
           <div class="col-lg-4 box">
             <i class="ion-ios-bookmarks-outline"></i>
-            <h4 class="title"><a href="">Master Décisionnelle</a></h4>
+            <h4 class="title"><a href="document.php?an=4">Master Décisionnelle</a></h4>
             <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
           </div>
-
         </div>
       </div>
     </section><!-- #featured-services -->
-
     <!--==========================
       About Us Section
     ============================-->
@@ -114,7 +111,6 @@
       <div class="container">
         <header class="section-header">
           <h3>À propos</h3>
-          
         </header>
         <div class="row about-cols">
           <div class="col-md-4 wow fadeInUp">
@@ -129,7 +125,6 @@
               </p>
             </div>
           </div>
-
           <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
             <div class="about-col">
               <div class="img">
@@ -142,7 +137,6 @@
               </p>
             </div>
           </div>
-
           <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
             <div class="about-col">
               <div class="img">
@@ -155,9 +149,7 @@
               </p>
             </div>
           </div>
-
         </div>
-
       </div>
     </section><!-- #about -->
     <!--==========================
@@ -165,43 +157,34 @@
     ============================-->
     <section id="skills">
       <div class="container">
-
         <header class="section-header">
           <h3>Our Skills</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
         </header>
-
         <div class="skills-content">
-
           <div class="progress">
             <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
               <span class="skill">HTML <i class="val">100%</i></span>
             </div>
           </div>
-
           <div class="progress">
             <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
               <span class="skill">CSS <i class="val">90%</i></span>
             </div>
           </div>
-
           <div class="progress">
             <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
               <span class="skill">JavaScript <i class="val">75%</i></span>
             </div>
           </div>
-
           <div class="progress">
             <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
               <span class="skill">Photoshop <i class="val">55%</i></span>
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
-
     <!--==========================
       Call To Action Section
     ============================-->
@@ -227,14 +210,11 @@
     ============================-->
     <section id="contact" class="section-bg wow fadeInUp">
       <div class="container">
-
         <div class="section-header">
           <h3>Contact Us</h3>
           <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
         </div>
-
         <div class="row contact-info">
-
           <div class="col-md-4">
             <div class="contact-address">
               <i class="ion-ios-location-outline"></i>
@@ -242,7 +222,6 @@
               <address>A108 Adam Street, NY 535022, USA</address>
             </div>
           </div>
-
           <div class="col-md-4">
             <div class="contact-phone">
               <i class="ion-ios-telephone-outline"></i>
@@ -250,7 +229,6 @@
               <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
             </div>
           </div>
-
           <div class="col-md-4">
             <div class="contact-email">
               <i class="ion-ios-email-outline"></i>
@@ -258,9 +236,7 @@
               <p><a href="mailto:info@example.com">info@example.com</a></p>
             </div>
           </div>
-
         </div>
-
         <div class="form">
           <div id="sendmessage">Your message has been sent. Thank you!</div>
           <div id="errormessage"></div>
@@ -286,12 +262,9 @@
             <div class="text-center"><button type="submit">Send Message</button></div>
           </form>
         </div>
-
       </div>
     </section><!-- #contact -->
-
   </main>
-
   <!--==========================
     Footer
   ============================-->
@@ -299,12 +272,10 @@
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
           <div class="col-lg-3 col-md-6 footer-info">
             <h3>BizPage</h3>
             <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
           </div>
-
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
@@ -330,12 +301,9 @@
               <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
             </div>
           </div>
-          
-
         </div>
       </div>
     </div>
-
     <div class="container">
       <div class="copyright">
         &copy; Copyright <strong>BizPage</strong>. All Rights Reserved
@@ -351,9 +319,7 @@
       </div>
     </div>
   </footer><!-- #footer -->
-
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
@@ -370,9 +336,7 @@
   <script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
   <!-- Contact Form JavaScript File -->
   <script src="contactform/contactform.js"></script>
-
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
-
 </body>
 </html>

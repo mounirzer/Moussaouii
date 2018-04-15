@@ -1,19 +1,11 @@
-
-
 <?php
-
 $id=$_GET["id"];
-
 $conn=mysqli_connect('localhost','root','','siteweb');
-$resultat=mysqli_query($conn,'SELECT * From support where id='.$id);
+$resultat=mysqli_query($conn,'SELECT * From article WHERE id_article='.$id);
 $row=mysqli_fetch_assoc($resultat);
-
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,7 +29,6 @@ $row=mysqli_fetch_assoc($resultat);
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-
 <body class="fix-header card-no-border fix-sidebar">
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
@@ -73,7 +64,7 @@ $row=mysqli_fetch_assoc($resultat);
                         <!-- Logo text --><span>
                          <!-- dark Logo text -->
                          <img src="../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
-                         <!-- Light Logo text -->    
+                         <!-- Light Logo text -->
                          <img src="../assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
                 </div>
                 <!-- ============================================================== -->
@@ -118,10 +109,9 @@ $row=mysqli_fetch_assoc($resultat);
             <div class="scroll-sidebar">
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
-                    <?php    
+                    <?php
                         include_once("aside.php");
                  ?>
-                    
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>
@@ -149,7 +139,6 @@ $row=mysqli_fetch_assoc($resultat);
                             <li class="breadcrumb-item active">Ajouter Article</li>
                         </ol>
                     </div>
-                    
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Bread crumb and right sidebar toggle -->
@@ -158,58 +147,36 @@ $row=mysqli_fetch_assoc($resultat);
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
                 <!-- Row -->
-                
                     <!-- Column -->
                     <!-- Column -->
                     <div class="col-lg-8 col-xlg-9 col-md-7">
                         <div class="card">
                             <!-- Tab panes -->
                             <div class="card-body">
-                                
-<form class="form-horizontal form-material" method="POST" action="php/modarticle.php?id=<?php echo $row["id"]; ?>">
+                            <form class="form-horizontal form-material" method="POST" action="php/modarticle.php?id=<?php echo $row["id_article"]; ?>">
                                     <div class="form-group">
                                         <label class="col-md-12">Titre :</label>
                                         <div class="col-md-12">
-                                            <input type="text" value="<?php echo $row["nom"]; ?>" name="titre" class="form-control form-control-line">
+                                            <input type="text" value="<?php echo $row["titreart"]; ?>" name="titre" class="form-control form-control-line">
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-12" >Année :</label>
-                                        <div class="col-sm-12">
-                                            <select class="form-control form-control-line" name="annee">
-                                                <option>- -</option>
-                                                <option>2éme année informatique</option>
-                                                <option>3éme année (Décisionnelle)</option>
-                                                <option>Master (Décisionnelle)</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Module :</label>
-                                        <div class="col-md-12">
-                                            <input type="text" value="<?php echo $row["module"]; ?>" name="module" class="form-control form-control-line">
-                                        </div>
-                                    </div>
-                                    
                                     <div class="form-group">
                                         <label class="col-md-12">Résumer :</label>
                                         <div class="col-md-12">
-                                            <input rows="10" value="<?php echo $row["resumer"]; ?>"  class="form-control form-control-line" name="resumer" placeholder="Texte"></input>
+                                            <input rows="10" value="<?php echo $row["resumeart"]; ?>"  class="form-control form-control-line" name="resumer" placeholder="Texte"></input>
                                         </div>
                                     </div>
                                     <label class="col-md-12">Lien :</label>
                                         <div class="col-md-12">
-                                            <input type="text" value="<?php echo $row["lien"] ?>" placeholder="exemple.com" name="lien" class="form-control form-control-line">
+                                            <input type="text" value="<?php echo $row["lienart"] ?>" placeholder="exemple.com" name="lien" class="form-control form-control-line">
                                         </div>
                                        </br>
                                     <div class="form-group">
                                         <div class="col-sm-12">
-                                            <button class="btn btn-success" type="submit" >Ajouter</button>
+                                            <button class="btn btn-success" type="submit" >Modifier</button>
                                         </div>
                                     </div>
                                 </form>
-
-
                             </div>
                         </div>
                     </div>
@@ -226,7 +193,7 @@ $row=mysqli_fetch_assoc($resultat);
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            
+
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->

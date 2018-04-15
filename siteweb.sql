@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  sam. 14 avr. 2018 à 00:10
+-- Généré le :  lun. 16 avr. 2018 à 00:14
 -- Version du serveur :  10.1.28-MariaDB
 -- Version de PHP :  5.6.32
 
@@ -76,6 +76,27 @@ INSERT INTO `admin` (`id`, `nom`, `prenom`, `date`, `lieu_de_n`, `secteur`, `uni
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `article`
+--
+
+CREATE TABLE `article` (
+  `id_article` int(50) NOT NULL,
+  `titreart` varchar(50) NOT NULL,
+  `lienart` varchar(255) NOT NULL,
+  `resumeart` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `article`
+--
+
+INSERT INTO `article` (`id_article`, `titreart`, `lienart`, `resumeart`) VALUES
+(1, 'Towards enhanced reactive routing in urban Vehicul', 'https://www.researchgate.net/profile/Soufiene_Djahel/publication/280317385_Towards_Enhanced_Reactive_Routing_in_Urban_Vehicular_Ad_hoc_Networks/links/55b24f4908aec0e5f4317a43/Towards-Enhanced-Reactive-Routing-in-Urban-Vehicular-Ad-hoc-Networks.pdf', 'In this paper, we investigate the efficiency of the reactive routing approach in Vehicular Ad\r\nHoc Networks (VANETs) with main focus on reducing the incurred overhead by control\r\npackets used for rout'),
+(2, 'reseau', 'https://scholar.google.fr/citations?user=dgcdtUMAAAAJ&hl=fr#d=gs_md_cita-d&p=&u=%2Fcitations%3Fview_op%3Dview_citation%26hl%3Dfr%26user%3DdgcdtUMAAAAJ%26citation_for_view%3DdgcdtUMAAAAJ%3Au5HHmVD_uO8C%26tzom%3D-60', 'gggggggggggggg');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `support`
 --
 
@@ -96,8 +117,7 @@ CREATE TABLE `support` (
 INSERT INTO `support` (`id`, `nom`, `annee`, `resumer`, `type`, `lien`, `module`) VALUES
 (1, '', '2Ã©me annÃ©e informatique', '', '', '', ''),
 (2, '', '2Ã©me annÃ©e informatique', '', '', '', ''),
-(3, '', '2Ã©me annÃ©e informatique', '', '', '', ''),
-(4, '', '2Ã©me annÃ©e informatique', '', '', '', ''),
+(3, 'opooo', '', '', '', 'opo.html', ''),
 (5, 'mm', '2Ã©me annÃ©e informatique', 'mm', '', 'mm', 'mm'),
 (6, 'mm', '2Ã©me annÃ©e informatique', 'mm', '', 'mm', 'mm'),
 (7, 'mm', '2Ã©me annÃ©e informatique', 'mm', 'Cour', 'mm', 'mm');
@@ -120,6 +140,15 @@ ALTER TABLE `admin`
   ADD UNIQUE KEY `id` (`id`);
 
 --
+-- Index pour la table `article`
+--
+ALTER TABLE `article`
+  ADD PRIMARY KEY (`id_article`),
+  ADD UNIQUE KEY `id_article` (`id_article`),
+  ADD UNIQUE KEY `id_article_2` (`id_article`),
+  ADD UNIQUE KEY `id_article_3` (`id_article`);
+
+--
 -- Index pour la table `support`
 --
 ALTER TABLE `support`
@@ -140,6 +169,12 @@ ALTER TABLE `actuallite`
 --
 ALTER TABLE `admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT pour la table `article`
+--
+ALTER TABLE `article`
+  MODIFY `id_article` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `support`

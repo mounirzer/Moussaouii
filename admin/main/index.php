@@ -1,14 +1,10 @@
 <?php
-
+session_start();
+ if (!(isset($_SESSION ["username"]))) {header("location: ../login.php ");}
 $conn=mysqli_connect('localhost','root','','siteweb');
 $resultat=mysqli_query($conn,'SELECT * FROM admin WHERE id=1');
-
 $row=mysqli_fetch_assoc($resultat);
-
-
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,7 +119,7 @@ $row=mysqli_fetch_assoc($resultat);
             <div class="scroll-sidebar">
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
-                 <?php    
+                 <?php
                         include_once("aside.php");
                  ?>
                 </nav>
@@ -142,7 +138,7 @@ $row=mysqli_fetch_assoc($resultat);
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
         <div class="page-wrapper" >
-              
+
             <!-- ============================================================== -->
             <!-- Container fluid  -->
             <!-- ============================================================== -->
@@ -170,16 +166,16 @@ $row=mysqli_fetch_assoc($resultat);
                 <!-- ============================================================== -->
                 <div class="row">
                     <!-- Column -->
-                    
+
                     <!-- Column -->
-                    
+
                 <!-- ============================================================== -->
                 <!-- End Sales Chart -->
                 <!-- ============================================================== -->
                 <!-- ============================================================== -->
                 <!-- Projects of the Month -->
                 <!-- ============================================================== -->
-                
+
                 <!-- ============================================================== -->
                 <!-- End Projects of the Month -->
                 <!-- ============================================================== -->
@@ -195,7 +191,7 @@ $row=mysqli_fetch_assoc($resultat);
                                     <h4 class="card-title m-t-10"><?php echo $row["nom"]; echo " "; echo $row["prenom"];  ?></h4>
                                     <h6 class="card-subtitle"><?php echo $row["bio"]; ?></h6>
                                     <div class="row text-center justify-content-md-center">
-                                        
+
                                     </div>
                                 </center>
                             </div>
@@ -220,8 +216,8 @@ $row=mysqli_fetch_assoc($resultat);
                                             <input type="text" name="prenom" value="<?php echo $row["prenom"]; ?>" class="form-control form-control-line">
                                         </div>
                                     </div>
-                                    
-                                    
+
+
                                     <div class="form-group">
                                         <label class="col-md-12">Date de Naissance :</label>
                                         <div class="col-md-12">
