@@ -114,7 +114,7 @@
       <div class="container">
         <header class="section-header">
           <h3>À propos</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          
         </header>
         <div class="row about-cols">
           <div class="col-md-4 wow fadeInUp">
@@ -308,9 +308,9 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Home</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">About us</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Services</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#intro">Accueil</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#about">A propos</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#action">Articles / Documents</a></li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-6 footer-contact">
@@ -330,13 +330,7 @@
               <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit"  value="Subscribe">
-            </form>
-          </div>
+          
 
         </div>
       </div>
