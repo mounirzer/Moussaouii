@@ -13,6 +13,8 @@
                         </li>
                         <li> <a class="waves-effect waves-dark" href="actualites.php" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Suprimer / Modifier</span></a>
                         </li>
+       <li> <a class="waves-effect waves-dark" href="logout.php" aria-expanded="false"><i></i><span class="hide-menu">Deconnexion ..</span></a>
+                        </li>
     </ul>
 
                 
