@@ -54,10 +54,10 @@
           <div class="carousel-inner" role="listbox">
     <?php $con = mysqli_connect("localhost", "root", "", "siteweb");
      $sql = "SELECT * FROM actuallite";
-    $result = mysqli_query($con, $sql);$i=0;
-     while($row = mysqli_fetch_assoc($result)){$i=$i+1;?>
+    $result = mysqli_query($con, $sql);$i=1;
+     while($row = mysqli_fetch_assoc($result)){?>
           <div class="carousel-item <?php if ($i==1) {echo "active";}?>">
-            <div class="carousel-background"><img src="img/intro-carousel/<?php echo $i;?>.jpg" alt=""></div>
+            <div class="carousel-background"><img src="localhost/<?php echo $row["LienImage"] ; ?>" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2><?php echo $row["titre"]; ?></h2>
@@ -66,7 +66,7 @@
               </div>
             </div>
          </div>
-            <?php } ?>
+            <?php $i=$i+1; } ?>
       </div>
         <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>

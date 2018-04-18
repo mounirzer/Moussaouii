@@ -171,6 +171,18 @@
                                         </div>
                                     </div>
                                 </form>
+                                    <div >
+                                  <form method="POST" enctype="multipart/form-data" action="php/upload.php">
+                                      
+                                        <div class="form-group">
+                                        <div class="col-sm-12"  >
+                                            <input  class="btn btn-success" type="file" name="file" style="padding-top: 0px;padding-bottom: 0px;">
+                                           
+                                             <button class="btn btn-success" type="submit" style="padding-top: 3px; padding-bottom:3px;">Ajouter</button>
+                                        </div>
+                                    </div>
+                                 </form>  
+                                </div>
                             </div>
                         </div>
                     </div>

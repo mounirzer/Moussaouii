@@ -5,11 +5,11 @@ $id=$_GET["id"];
 $titre = $_POST["titre"];
 $contenu = $_POST["contenu"];
 $date = $_POST["date"];
-$lien = $POST["lien"];
+
 
 $conn = mysqli_connect('localhost','root','','siteweb');
 
-mysqli_query($conn," UPDATE actuallite set titre='$titre', contenu='$contenu', date='$date', lien='$lien' WHERE id= ".$id);
+mysqli_query($conn," UPDATE actuallite set titre='$titre', contenu='$contenu', date='$date' WHERE id= ".$id);
 
 
 

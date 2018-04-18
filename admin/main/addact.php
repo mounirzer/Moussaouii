@@ -23,6 +23,7 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+
 </head>
 <body class="fix-header card-no-border fix-sidebar">
     <!-- Preloader - style you can find in spinners.css -->
@@ -113,7 +114,7 @@
                         <div class="card">
                             <!-- Tab panes -->
                             <div class="card-body">
-                                <form class="form-horizontal form-material" method="POST" action="php/addactualite.php">
+                                <form class="form-horizontal form-material" method="POST" action="php/addactualite.php"   enctype="multipart/form-data">
                                       <div class="form-group">
                                         <label class="col-sm-12"></label>
 
@@ -136,20 +137,30 @@
                                             <input type="text" placeholder="jj/MM/AAAA" class="form-control form-control-line" name="date">
                                         </div>
                                     </br>
-                                    <div>
-                                        <label class="col-md-12">Lien :</label>
-                                        <div class="col-md-12">
-                                            <input type="text" placeholder="exemple.com" class="form-control form-control-line" name="lien">
-                                        </div>
-                                    </div>
+                                    
 
-                                    <div class="form-group">
+                                    
+                                      
+                               
+                               
+                                  
+                                      
+                                        <div class="form-group">
+                                        <div class="col-sm-12"  >
+                                            <input  class="btn btn-success" type="file"  name="file" style="padding-top: 0px;padding-bottom: 0px;">
+                                           
+                                            
+                                        </div>
+                                    </div> 
+
+                                      <div class="form-group">
                                         <div class="col-sm-12">
                                             <button class="btn btn-success" type="submit">Ajouter</button>
                                         </div>
                                     </div>
-                                      
-                                </form>
+
+                                          </form>
+                                </div>
                             </div>
                         </div>
                     </div>
