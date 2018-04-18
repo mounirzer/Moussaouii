@@ -1,6 +1,6 @@
 <?php
 session_start();
- if (!(isset($_SESSION ["username"]))) {header("location: ../login.php ");}
+ if (!(isset($_SESSION ["username"]))) {header("location: ../main/login/login.php ");}
 $conn=mysqli_connect('localhost','root','','siteweb');
 $resultat=mysqli_query($conn,'SELECT * FROM admin WHERE id=1');
 $row=mysqli_fetch_assoc($resultat);
