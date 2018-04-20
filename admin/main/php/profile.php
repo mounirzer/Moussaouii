@@ -15,7 +15,7 @@ $pass=$_POST["pass"];
 
 $conn=mysqli_connect('localhost','root','','siteweb');
 
-mysqli_query($conn," UPDATE admin set nom='$nom' , prenom='$prenom' , date='$date' , lieu_de_n='$lieu' , grade='$grade' , secteur='$secteur' , univ='$univ', bio='$bio' , email='$email', username='$username', mdp='$pass' WHERE id=1 ");
+mysqli_query($conn," UPDATE admin set nom='$nom' , prenom='$prenom' , date='$date' , lieu_de_n='$lieu' , grade='$grade' , secteur='$secteur' , univ='$univ', bio='$bio' , email='$email', username='$username', mdp='$pass' WHERE id=2 ");
 
 
 header("location: ../index.php");
