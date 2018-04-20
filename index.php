@@ -208,32 +208,36 @@
     <!--==========================
       Contact Section
     ============================-->
+      <?php
+    $con=mysqli_connect('localhost','root','','siteweb');
+    $resul=mysqli_query($con,'SELECT * FROM admin');
+        $row=mysqli_fetch_assoc($resul);
+    ?>
     <section id="contact" class="section-bg wow fadeInUp">
       <div class="container">
         <div class="section-header">
-          <h3>Contact Us</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <h3>Contact</h3>
         </div>
         <div class="row contact-info">
           <div class="col-md-4">
             <div class="contact-address">
               <i class="ion-ios-location-outline"></i>
-              <h3>Address</h3>
-              <address>A108 Adam Street, NY 535022, USA</address>
+              <h3>Adresse</h3>
+              <address><?php echo $row["adresse"] ?></address>
             </div>
           </div>
           <div class="col-md-4">
             <div class="contact-phone">
               <i class="ion-ios-telephone-outline"></i>
-              <h3>Phone Number</h3>
-              <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+              <h3>Télephone</h3>
+              <p><a href="tel:+155895548855"><?php echo $row["phone"] ?></a></p>
             </div>
           </div>
           <div class="col-md-4">
             <div class="contact-email">
               <i class="ion-ios-email-outline"></i>
               <h3>Email</h3>
-              <p><a href="mailto:info@example.com">info@example.com</a></p>
+              <p><a href="mailto:info@example.com"><?php echo $row["email"] ?></a></p>
             </div>
           </div>
         </div>

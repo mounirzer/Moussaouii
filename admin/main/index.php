@@ -231,6 +231,18 @@ $row=mysqli_fetch_assoc($resultat);
                                         </div>
                                     </div>
                                     <div class="form-group">
+                                        <label class="col-md-12">Adresse :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" name="adresse" value="<?php echo $row["adresse"]; ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">Télephone :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" name="phone" value="<?php echo $row["phone"]; ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
                                         <label class="col-md-12">Grade :</label>
                                         <div class="col-md-12">
                                             <input type="text" name="grade" value="<?php echo $row["grade"]; ?>" class="form-control form-control-line">
