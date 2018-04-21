@@ -6,7 +6,12 @@ $conn=mysqli_connect('localhost','root','','siteweb');
 $resultat=mysqli_query($conn,"SELECT * From support where id=".$id);
 $row=mysqli_fetch_assoc($resultat);
 
+session_start();
+ if (!(isset($_SESSION ["username"]))) {header("location: ../main/login/index.php ");}
+$resulta=mysqli_query($conn,'SELECT * FROM admin');
+$row2=mysqli_fetch_assoc($resulta);
 ?>
+
 
 
 <!DOCTYPE html>

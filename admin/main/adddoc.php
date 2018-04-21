@@ -108,19 +108,30 @@
                                     <div class="form-group">
                                         <label class="col-sm-12" >Année :</label>
                                         <div class="col-sm-12">
-                                            <select class="form-control form-control-line" name="annee">
-                                                <option>2éme année informatique</option>
-                                                <option>3éme année (Décisionnelle)</option>
-                                                <option>Master (Décisionnelle)</option>
+                                            <select class="form-control form-control-line" name="annee">                                                    <?php $conn=mysqli_connect('localhost','root','','siteweb');
+                                                $resul=mysqli_query($conn,"SELECT DISTINCT module_annee FROM module ");
+                                                while($row=mysqli_fetch_assoc($resul)){ ?>
+                                                <option><?php echo $row["module_annee"]; ?></option>
+<?php } ?>
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Module Document:</label>
-                                        <div class="col-md-12">
-                                            <input type="text" placeholder="Module " name="module" class="form-control form-control-line">
-                                        </div>
-                                    </div>
+                                      <div class="form-group">
+
+                                     <label class="col-sm-12">Module Document:</label>
+
+                                        <div class="col-sm-12">
+                                            <select class="form-control form-control-line" name="module" >
+                                                <?php $conn=mysqli_connect('localhost','root','','siteweb');
+                                                $resul=mysqli_query($conn,"SELECT DISTINCT module FROM module ");
+                                                while($row=mysqli_fetch_assoc($resul)){ ?>
+                                                <option><?php echo $row["module"] ?></option>
+                                                   <?php } ?>
+                                            </select>
+                                  </div>
+                                  </div>
+                                  <br>
+                                
                                     <div class="form-group">
                                         <label class="col-sm-12">Type Document:</label>
                                         <div class="col-sm-12">

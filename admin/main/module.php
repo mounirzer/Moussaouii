@@ -114,19 +114,12 @@ $row=mysqli_fetch_assoc($resultat);
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-sm-12" >Année :</label>
-                                        <div class="col-sm-12">
-                                            <select class="form-control form-control-line" name="annee">
-                                                <option>2éme année informatique</option>
-                                                <option>3éme année (Décisionnelle)</option>
-                                                <option>Master (Décisionnelle)</option>
-                                            </select>
+                                        <label class="col-md-12">Année :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="Titre " name="annee" class="form-control form-control-line">
                                         </div>
                                     </div>
-                                    
-                                       </br>
-                                   
-                                      
+                                     </br>
                                        
                                      <div class="form-group">
                                         <div class="col-sm-12">

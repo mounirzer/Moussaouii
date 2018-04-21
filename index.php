@@ -83,24 +83,20 @@
     <!--==========================
       Featured Services Section
     ============================-->
+     <?php
+      $conn = mysqli_connect('localhost', 'root', '', 'siteweb');
+    ?>
     <section id="featured-services">
-      <div class="container">
+      <div class="container">     
         <div class="row">
+        <?php 
+                $resul = mysqli_query($conn, 'SELECT DISTINCT module_annee FROM module' );
+          while ($ro= mysqli_fetch_assoc($resul)){?>         
           <div class="col-lg-4 box">
             <i class="ion-ios-bookmarks-outline"></i>
-            <h4 class="title"><a href="document.php?an=2">2éme année info</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            <h4 class="title"><a href="documents.php?an=<?php echo $ro["module_annee"]; ?>"><?php echo $ro["module_annee"]; ?></a></h4>
           </div>
-          <div class="col-lg-4 box box-bg">
-            <i class="ion-ios-bookmarks-outline"></i>
-            <h4 class="title"><a href="document.php?an=3">3éme année (Décisionnelle)</a></h4>
-            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-          </div>
-          <div class="col-lg-4 box">
-            <i class="ion-ios-bookmarks-outline"></i>
-            <h4 class="title"><a href="document.php?an=4">Master Décisionnelle</a></h4>
-            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-          </div>
+          <?php } ?>
         </div>
       </div>
     </section><!-- #featured-services -->
@@ -112,9 +108,7 @@
         <header class="section-header">
           <h3>À propos</h3>
         </header>
-          <?php
-   
-                $conn = mysqli_connect('localhost', 'root', '', 'siteweb');
+         <?php 
                     $result = mysqli_query($conn, 'SELECT * FROM admin' );
            $row= mysqli_fetch_assoc($result);
                 if(mysqli_num_rows($result)>0){

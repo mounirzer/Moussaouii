@@ -20,16 +20,13 @@
   <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
-  <!-- =======================================================
-    Theme Name: BizPage
-    Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
 <?php 
 $conn=mysqli_connect('localhost','root','','siteweb');
+if (isset($_GET["an"])){
+$anne = $_GET["an"];
 //$inserer=mysql_query("INSERT INTO support VALUES('','bdd','ll','ll','hk','ko')");
-$sql="SELECT * FROM support where typedoc!='article' ";
+$sql="SELECT * FROM support where anneedoc = '$anne'";}
+else{$sql="SELECT * FROM support";}
 $resultat=mysqli_query($conn,$sql);
 $resultcheck=mysqli_num_rows($resultat);
  ?>
@@ -38,33 +35,12 @@ $resultcheck=mysqli_num_rows($resultat);
   <?php
     include_once("header.php");
     ?>
-    <!--==========================
-      Featured Services Section
-    ============================-->
     <section id="featured-services">
       <div class="container">
         <div class="row">
         </div>
       </div>
-    </section><!-- #featured-services -->
-    <!--==========================
-      About Us Section
-    ============================-->
-    <!--==========================
-      Skills Section
-    ============================-->   
-    <!--==========================
-      Facts Section
-    ============================-->  
-    <!--==========================
-      Services Section
-    ============================-->
-    <!--==========================
-      Call To Action Section
-    ============================-->
-    <!--==========================
-      Portfolio Section
-    ============================-->
+    </section>
     <section id="portfolio"  class="section-bg" >
       <div class="container">
        <header class="section-header">
@@ -73,22 +49,22 @@ $resultcheck=mysqli_num_rows($resultat);
         <div class="row">
           <div class="col-lg-12">
             <ul id="portfolio-flters">
-
-              <li data-filter="*" class="filter-active"><a href="">All</a></li>
-
+             <li data-filter="*" class="filter-active"><a href="">All</a></li>
              <!-- <li data-filter="*" class="filter-active">All</li>-->
-
               <?php 
-      $sql2="SELECT DISTINCT moduledoc FROM support where typedoc!='article' ";
-      $resultat2=mysqli_query($conn,$sql2);
-      $resultcheck2=mysqli_num_rows($resultat2);
-        while($rows2=mysqli_fetch_assoc($resultat2)){
-         ?>
-              <li data-filter=".<?php echo $rows2["moduledoc"]; ?>"> <?php echo $rows2["moduledoc"];?></li>
+              if (isset($_GET["an"])){
+              $anne = $_GET["an"];
+              $sql2="SELECT * FROM module where module_annee = '$anne'";}
+           else{$sql2="SELECT * FROM module";}
+            $resultat2=mysqli_query($conn,$sql2);
+           $resultcheck2=mysqli_num_rows($resultat2);
+           while($rows2=mysqli_fetch_assoc($resultat2)){
+             ?>
+              <li data-filter=".<?php echo $rows2["module"]; ?>"> <?php echo $rows2["module"];?></li>
               <!--<li data-filter=".filter-card"><a href="reseau.php">reseau de communication</a></li>
               <li data-filter=".filter-web"><a href="bddoo.php">Base de donnee oriente objet</a></li>
               <li data-filter=".filter-web"><a href="SIAD.php">systeme informatique a l’aide a la decision</a></li>-->
-          <?php  
+           <?php  
                 }
             ?>
             </ul>
@@ -117,25 +93,13 @@ $resultcheck=mysqli_num_rows($resultat);
 
           ?>
         </div>
-
       </div>
-    </section><!-- #portfolio -->
-    <!--==========================
-      Contact Section
-    ============================-->
-    <!-- #contact -->
-
-
-  <!--==========================
-    Footer
-  ============================-->
+    </section>
 <?php
 include_once("footer.php");
 ?>
 <!-- #footer -->
-
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>

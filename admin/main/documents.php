@@ -1,3 +1,10 @@
+<?php
+session_start();
+ if (!(isset($_SESSION ["username"]))) {header("location: ../main/login/index.php ");}
+$conn=mysqli_connect('localhost','root','','siteweb');
+$resultat=mysqli_query($conn,'SELECT * FROM admin');
+$row=mysqli_fetch_assoc($resultat);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -153,7 +160,7 @@
                 <?php
 $i=0;
 $conn=mysqli_connect('localhost','root','','siteweb');
-$resultat=mysqli_query($conn,"SELECT * From support WHERE typedoc!='article'");
+$resultat=mysqli_query($conn,"SELECT * From support ");
 ?>
 
                 <div class="row">
@@ -176,7 +183,9 @@ $resultat=mysqli_query($conn,"SELECT * From support WHERE typedoc!='article'");
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <?php  while($row=mysqli_fetch_assoc($resultat)){    ?>
+                                        <?php  
+                                            
+                                            while($row=mysqli_fetch_assoc($resultat)){    ?>
                                             <tr>
                                                 <td><?php $i=$i+1;  echo $i; ?></td>
                                                 <td><?php  echo $row["nomdoc"]; ?></td>
