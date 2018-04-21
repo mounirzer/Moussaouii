@@ -1,3 +1,11 @@
+
+<?php
+session_start();
+ if (!(isset($_SESSION ["username"]))) {header("location: ../main/login/index.php ");}
+$conn=mysqli_connect('localhost','root','','siteweb');
+$resultat=mysqli_query($conn,'SELECT * FROM admin ');
+$row=mysqli_fetch_assoc($resultat);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,16 +117,24 @@
                                         <label class="col-sm-12" >Année :</label>
                                         <div class="col-sm-12">
                                             <select class="form-control form-control-line" name="annee">
-                                                <option>2éme année informatique</option>
-                                                <option>3éme année (Décisionnelle)</option>
-                                                <option>Master (Décisionnelle)</option>
+                                                    <?php $conn=mysqli_connect('localhost','root','','siteweb');
+                                                $resul=mysqli_query($conn,"SELECT DISTINCT module_annee FROM module ");
+                                                while($row=mysqli_fetch_assoc($resul)){ ?>
+                                                <option><?php echo $row["module_annee"]; ?></option>
+<?php } ?>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-md-12">Module Document:</label>
-                                        <div class="col-md-12">
-                                            <input type="text" placeholder="Module " name="module" class="form-control form-control-line">
+                                        <label class="col-sm-12">Module Document:</label>
+                                        <div class="col-sm-12">
+                                            <select class="form-control form-control-line" name="type" >
+                                                <?php $conn=mysqli_connect('localhost','root','','siteweb');
+                                                $resul=mysqli_query($conn,"SELECT DISTINCT module FROM module ");
+                                                while($row=mysqli_fetch_assoc($resul)){ ?>
+                                                <option><?php echo $row["module"] ?></option>
+<?php } ?>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -128,7 +144,6 @@
                                                 <option>Cour</option>
                                                 <option>TD</option>
                                                 <option>TP</option>
-  
                                                 <option>examen</option>
 
                                             </select>

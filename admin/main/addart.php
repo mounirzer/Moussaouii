@@ -1,3 +1,11 @@
+
+<?php
+session_start();
+ if (!(isset($_SESSION ["username"]))) {header("location: ../main/login/index.php ");}
+$conn=mysqli_connect('localhost','root','','siteweb');
+$resultat=mysqli_query($conn,'SELECT * FROM admin ');
+$row=mysqli_fetch_assoc($resultat);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
