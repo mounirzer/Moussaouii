@@ -2,9 +2,6 @@
 <?php
 session_start();
  if (!(isset($_SESSION ["username"]))) {header("location: ../main/login/index.php ");}
-$conn=mysqli_connect('localhost','root','','siteweb');
-$resultat=mysqli_query($conn,'SELECT * FROM admin ');
-$row=mysqli_fetch_assoc($resultat);
 ?>
 <!DOCTYPE html>
 <html lang="en"><head>
@@ -145,21 +142,21 @@ $row=mysqli_fetch_assoc($resultat);
                                             <input type="text" placeholder="jj/MM/AAAA" class="form-control form-control-line" name="date">
                                         </div>
                                     </br>
-                                    
 
-                                    
-                                      
-                               
-                               
-                                  
-                                      
+
+
+
+
+
+
+
                                         <div class="form-group">
                                         <div class="col-sm-12"  >
                                             <input  class="btn btn-success" type="file"  name="file" style="padding-top: 0px;padding-bottom: 0px;">
-                                           
-                                            
+
+
                                         </div>
-                                    </div> 
+                                    </div>
 
                                       <div class="form-group">
                                         <div class="col-sm-12">

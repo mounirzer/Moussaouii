@@ -1,20 +1,12 @@
 
 <?php
-
 $id=$_GET["id"];
-
 $conn=mysqli_connect('localhost','root','','siteweb');
-$resultat=mysqli_query($conn,'SELECT * From actuallite where id= '.$id);
+$resultat=mysqli_query($conn,'SELECT * From actuallite where idactua= '.$id);
 $row=mysqli_fetch_assoc($resultat);
-
 session_start();
  if (!(isset($_SESSION ["username"]))) {header("location: ../main/login/index.php ");}
-$result=mysqli_query($conn,'SELECT * FROM admin');
-$row2=mysqli_fetch_assoc($result);
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en"><head>
     <meta charset="utf-8">
@@ -96,15 +88,10 @@ $row2=mysqli_fetch_assoc($result);
             <div class="scroll-sidebar">
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
-                    <?php
-                        include_once("aside.php");
-                 ?>
-                </nav>
-                <!-- End Sidebar navigation -->
-            </div>
-            <!-- End Sidebar scroll-->
-        </aside>
-        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+                    <?php include_once("aside.php"); ?>
+                </nav><!-- End Sidebar navigation -->
+            </div><!-- End Sidebar scroll-->
+        </aside><!-- End Left Sidebar - style you can find in sidebar.scss  -->
         <!-- Page wrapper  -->
         <div class="page-wrapper">
             <!-- Container fluid  -->
@@ -133,39 +120,35 @@ $row2=mysqli_fetch_assoc($result);
                                 <form class="form-horizontal form-material" method="POST" action="php/modactualite.php?id=<?php echo $id; ?>">
                                       <div class="form-group">
                                         <label class="col-sm-12"></label>
-
                                     <div class="form-group">
                                         <label class="col-md-12">Titre :</label>
                                         <div class="col-md-12">
-                                            <input type="text" value="<?php echo $row["titre"] ?>" class="form-control form-control-line" name="titre">
+                                            <input type="text" value="<?php echo $row["titreactua"] ?>" class="form-control form-control-line" name="titre">
                                         </div>
                                     </div>
-
                                     <div class="form-group">
                                         <label class="col-md-12">Descpription :</label>
                                         <div class="col-md-12">
-                                            <input rows="10" value="<?php echo $row["contenu"] ?>" class="form-control form-control-line" name="contenu"></input>
+                                            <input rows="10" value="<?php echo $row["contenuactua"] ?>" class="form-control form-control-line" name="contenu"></input>
                                         </div>
                                     </div>
                                        <div class="form-group">
                                         <label class="col-md-12">date</label>
                                         <div class="col-md-12">
-                                            <input type="text" value="<?php echo $row["date"] ?>" class="form-control form-control-line" name="date">
+                                            <input type="text" value="<?php echo $row["dateactua"] ?>" class="form-control form-control-line" name="date">
                                         </div>
                                     </br>
                                     <div>
                                         <label class="col-md-12">Lien :</label>
                                         <div class="col-md-12">
-                                            <input type="text" value="<?php echo $row["lien"] ?>" class="form-control form-control-line" name="lien">
+                                            <input type="text" value="<?php echo $row["LienImage"] ?>" class="form-control form-control-line" name="lien">
                                         </div>
                                     </div>
-
                                     <div class="form-group">
                                         <div class="col-sm-12">
                                             <button class="btn btn-success" type="submit">Modifier</button>
                                         </div>
                                     </div>
-                                      
                                 </form>
                             </div>
                         </div>
