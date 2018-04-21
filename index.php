@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="Utf8_generale_ci">
   <title>Moussaoui Boubaker</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
@@ -128,7 +128,7 @@
                 <img src="img/about-mission.jpg" alt="" class="img-fluid">
                 <div class="icon"><i class="ion-ios-list-outline"></i></div>
               </div>
-              <h2 class="title">Information Gerale </h2>
+              <h2 class="title">Information Generale </h2>
               <p>
             MOUSSAOUI Boubakeur est un <?php echo $row['grade'];?>,dans l'universite de <?php echo $row['univ'];?>, il a eu son baccaloreat en <?php echo $row['baccalaureat'];?>et il a obtenue son diplome en informatique de l'universite de <?php echo $row['ingeniorat'];?>
                   et son magister de l'universite de <?php echo $row['Magistere'];?>
