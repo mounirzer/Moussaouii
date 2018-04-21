@@ -153,7 +153,7 @@
                 <?php
 $i=0;
 $conn=mysqli_connect('localhost','root','','siteweb');
-$resultat=mysqli_query($conn,"SELECT * From support WHERE type!='article'");
+$resultat=mysqli_query($conn,"SELECT * From support WHERE typedoc!='article'");
 ?>
 
                 <div class="row">
@@ -179,11 +179,12 @@ $resultat=mysqli_query($conn,"SELECT * From support WHERE type!='article'");
                                         <?php  while($row=mysqli_fetch_assoc($resultat)){    ?>
                                             <tr>
                                                 <td><?php $i=$i+1;  echo $i; ?></td>
-                                                <td><?php  echo $row["nom"]; ?></td>
-                                                <td><?php  echo $row["annee"]; ?></td>
-                                                <td><?php  echo $row["module"]; ?></td>
-                                                <td><?php  echo $row["type"]; ?></td>
-
+                                                <td><?php  echo $row["nomdoc"]; ?></td>
+                                                <td><?php  echo $row["anneedoc"]; ?></td>
+                                                <td><?php  echo $row["moduledoc"]; ?></td>
+                                                <td><?php  echo $row["typedoc"]; ?></td>
+                                              <td><?php  echo $row["liendrivedoc"]; ?></td>
+                                            <td><?php  echo $row["lienteledoc"]; ?></td>
 
                                                 <td> <div class="form-group" style="display: inline;" >
                                         <div class="col-sm-12">
