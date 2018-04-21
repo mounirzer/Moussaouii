@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 21, 2018 at 01:15 PM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 7.2.3
+-- Client :  127.0.0.1
+-- Généré le :  Sam 21 Avril 2018 à 13:25
+-- Version du serveur :  10.1.21-MariaDB
+-- Version de PHP :  7.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,57 +17,54 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `siteweb`
+-- Base de données :  `siteweb`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `support`
+-- Structure de la table `support`
 --
 
 CREATE TABLE `support` (
   `id` int(11) NOT NULL,
-  `nom` text NOT NULL,
-  `annee` text NOT NULL,
-  `resumer` text NOT NULL,
-  `type` varchar(10) NOT NULL,
-  `lien` text NOT NULL,
-  `module` varchar(50) NOT NULL
+  `nomdoc` text NOT NULL,
+  `anneedoc` text NOT NULL,
+  `resumerdoc` text NOT NULL,
+  `typedoc` varchar(10) NOT NULL,
+  `liendrivedoc` text NOT NULL,
+  `moduledoc` varchar(50) NOT NULL,
+  `lienteledoc` text CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `support`
+-- Contenu de la table `support`
 --
 
-INSERT INTO `support` (`id`, `nom`, `annee`, `resumer`, `type`, `lien`, `module`) VALUES
-(8, 'poo', '2Ã©me annÃ©e informatique', 'kldsjflksj', 'Cour', '', 'poo'),
-(9, 'reseauuuuu', '3Ã©me annÃ©e (DÃ©cisionnelle)', 'ldjfldk', 'Cour', '', 'reseau'),
-(10, 'klsjdflks', 'Master (DÃ©cisionnelle)', '', 'Cour', '', 'basededonnee'),
-(11, 'lksjfks', '2Ã©me annÃ©e informatique', 'lkjdlfkjs', 'TP', '', 'poo'),
-(12, 'kmklml', '2Ã©me annÃ©e informatique', 'lkjskdjf', 'Cour', '', 'reseau');
+INSERT INTO `support` (`id`, `nomdoc`, `anneedoc`, `resumerdoc`, `typedoc`, `liendrivedoc`, `moduledoc`, `lienteledoc`) VALUES
+(51, 'bxcx', '2Ã©me annÃ©e informatique', 'cvbxb', 'Cour', 'vbc', 'vcnc', 'Cycle de vie d.docx'),
+(53, '', '2Ã©me annÃ©e informatique', '', 'Cour', '', '', 'docs_SI Examen 2015.PDF'),
+(54, '', '2Ã©me annÃ©e informatique', '', 'Cour', 'https://drive.google.com/file/d/1IjLkcDNubxtTC7wxrRj5K96ysN8efBed/view?usp=sharing', '', 'vide');
 
 --
--- Indexes for dumped tables
+-- Index pour les tables exportées
 --
 
 --
--- Indexes for table `support`
+-- Index pour la table `support`
 --
 ALTER TABLE `support`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables exportées
 --
 
 --
--- AUTO_INCREMENT for table `support`
+-- AUTO_INCREMENT pour la table `support`
 --
 ALTER TABLE `support`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-COMMIT;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
