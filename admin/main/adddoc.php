@@ -1,11 +1,3 @@
-
-<?php
-session_start();
- if (!(isset($_SESSION ["username"]))) {header("location: ../main/login/index.php ");}
-$conn=mysqli_connect('localhost','root','','siteweb');
-$resultat=mysqli_query($conn,'SELECT * FROM admin ');
-$row=mysqli_fetch_assoc($resultat);
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -117,24 +109,16 @@ $row=mysqli_fetch_assoc($resultat);
                                         <label class="col-sm-12" >Année :</label>
                                         <div class="col-sm-12">
                                             <select class="form-control form-control-line" name="annee">
-                                                    <?php $conn=mysqli_connect('localhost','root','','siteweb');
-                                                $resul=mysqli_query($conn,"SELECT DISTINCT module_annee FROM module ");
-                                                while($row=mysqli_fetch_assoc($resul)){ ?>
-                                                <option><?php echo $row["module_annee"]; ?></option>
-<?php } ?>
+                                                <option>2éme année informatique</option>
+                                                <option>3éme année (Décisionnelle)</option>
+                                                <option>Master (Décisionnelle)</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-sm-12">Module Document:</label>
-                                        <div class="col-sm-12">
-                                            <select class="form-control form-control-line" name="type" >
-                                                <?php $conn=mysqli_connect('localhost','root','','siteweb');
-                                                $resul=mysqli_query($conn,"SELECT DISTINCT module FROM module ");
-                                                while($row=mysqli_fetch_assoc($resul)){ ?>
-                                                <option><?php echo $row["module"] ?></option>
-<?php } ?>
-                                            </select>
+                                        <label class="col-md-12">Module Document:</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="Module " name="module" class="form-control form-control-line">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -144,6 +128,7 @@ $row=mysqli_fetch_assoc($resultat);
                                                 <option>Cour</option>
                                                 <option>TD</option>
                                                 <option>TP</option>
+  
                                                 <option>examen</option>
 
                                             </select>
@@ -160,8 +145,7 @@ $row=mysqli_fetch_assoc($resultat);
                                             <input type="text" placeholder="exemple.com" name="lien" class="form-control form-control-line">
                                         </div>
                                        </br>
-                                   
-                                      
+                                                                        
                                         <div class="form-group">
                                         <div class="col-sm-12"  >
                                             <input  class="btn btn-success" type="file" name="file" style="padding :0px 0px;">

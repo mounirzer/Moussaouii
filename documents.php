@@ -73,11 +73,11 @@ $resultcheck=mysqli_num_rows($resultat);
         <div class="row">
           <div class="col-lg-12">
             <ul id="portfolio-flters">
-<<<<<<< HEAD
+
               <li data-filter="*" class="filter-active"><a href="">All</a></li>
-=======
-              <li data-filter="*" class="filter-active">All</li>
->>>>>>> 8d4778b0ac8b3676c7c53793d793ccd395eaa0de
+
+             <!-- <li data-filter="*" class="filter-active">All</li>-->
+
               <?php 
       $sql2="SELECT DISTINCT moduledoc FROM support where typedoc!='article' ";
       $resultat2=mysqli_query($conn,$sql2);
@@ -104,7 +104,7 @@ $resultcheck=mysqli_num_rows($resultat);
               <figure>
                 <img src="img/portfolio/app1.jpg" class="img-fluid" alt="">
                 <a href="img/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="<?php echo $rows["liendrivedoc"];?>" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                <a href="<?php if($rows["lienteledoc"]=="vide"){echo $rows["liendrivedoc"];}else{echo "docs/".$rows["lienteledoc"];}?>" <?php if($rows["lienteledoc"]!="vide"){echo "download=".$rows["lienteledoc"];}?> class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
               </figure>
               <div class="portfolio-info">
                 <h4><a href="#"><?php echo $rows["nomdoc"];?></a></h4>
