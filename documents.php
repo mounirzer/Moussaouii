@@ -28,122 +28,94 @@
   ======================================================= -->
 <?php 
 $conn=mysqli_connect('localhost','root','','siteweb');
-
-
 //$inserer=mysql_query("INSERT INTO support VALUES('','bdd','ll','ll','hk','ko')");
-$sql="SELECT * FROM support where type!='article' ";
+$sql="SELECT * FROM support where typedoc!='article' ";
 $resultat=mysqli_query($conn,$sql);
 $resultcheck=mysqli_num_rows($resultat);
  ?>
-
 </head>
-
 <body>
   <?php
     include_once("header.php");
     ?>
-
     <!--==========================
       Featured Services Section
     ============================-->
     <section id="featured-services">
       <div class="container">
         <div class="row">
-
-          
         </div>
       </div>
     </section><!-- #featured-services -->
-
     <!--==========================
       About Us Section
     ============================-->
-    
     <!--==========================
       Skills Section
-    ============================-->
-   
-
+    ============================-->   
     <!--==========================
       Facts Section
-    ============================-->
-    
-
+    ============================-->  
     <!--==========================
       Services Section
     ============================-->
-    
-
     <!--==========================
       Call To Action Section
     ============================-->
-    
-
-
     <!--==========================
       Portfolio Section
     ============================-->
     <section id="portfolio"  class="section-bg" >
       <div class="container">
-
-
-        <header class="section-header">
+       <header class="section-header">
           <h3 class="section-title">Documents</h3>
         </header>
-
         <div class="row">
           <div class="col-lg-12">
             <ul id="portfolio-flters">
+<<<<<<< HEAD
+              <li data-filter="*" class="filter-active"><a href="">All</a></li>
+=======
               <li data-filter="*" class="filter-active">All</li>
+>>>>>>> 8d4778b0ac8b3676c7c53793d793ccd395eaa0de
               <?php 
-      $sql2="SELECT DISTINCT module FROM support where type!='article' ";
-$resultat2=mysqli_query($conn,$sql2);
-$resultcheck2=mysqli_num_rows($resultat2);
- 
-  while($rows2=mysqli_fetch_assoc($resultat2)){
-
-
+      $sql2="SELECT DISTINCT moduledoc FROM support where typedoc!='article' ";
+      $resultat2=mysqli_query($conn,$sql2);
+      $resultcheck2=mysqli_num_rows($resultat2);
+        while($rows2=mysqli_fetch_assoc($resultat2)){
          ?>
-              <li data-filter=".<?php echo $rows2["module"];?>"> <?php echo $rows2["module"];?></li>
+              <li data-filter=".<?php echo $rows2["moduledoc"]; ?>"> <?php echo $rows2["moduledoc"];?></li>
               <!--<li data-filter=".filter-card"><a href="reseau.php">reseau de communication</a></li>
               <li data-filter=".filter-web"><a href="bddoo.php">Base de donnee oriente objet</a></li>
               <li data-filter=".filter-web"><a href="SIAD.php">systeme informatique a l’aide a la decision</a></li>-->
-
           <?php  
-}
-
-          ?>
+                }
+            ?>
             </ul>
           </div>
         </div>
-
         <div class="row portfolio-container">
         <?php 
         if($resultcheck>0){
-  while($rows=mysqli_fetch_assoc($resultat)){
-
-
+         while($rows=mysqli_fetch_assoc($resultat)){
          ?>
-          <div class="col-lg-4 col-md-6 portfolio-item <?php echo $rows["module"];?> wow fadeInUp">
+          <div class="col-lg-4 col-md-6 portfolio-item <?php echo $rows["moduledoc"];?> wow fadeInUp">
             <div class="portfolio-wrap">
               <figure>
                 <img src="img/portfolio/app1.jpg" class="img-fluid" alt="">
                 <a href="img/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="<?php echo $rows["lien"];?>" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                <a href="<?php echo $rows["liendrivedoc"];?>" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
               </figure>
-
               <div class="portfolio-info">
-                <h4><a href="#"><?php echo $rows["nom"];?></a></h4>
-                <p><?php echo $rows["module"];?></p>
+                <h4><a href="#"><?php echo $rows["nomdoc"];?></a></h4>
+                <p><?php echo $rows["moduledoc"];?></p>
               </div>
             </div>
           </div>
-
           <?php  
-}}
+            }}
 
           ?>
-
         </div>
 
       </div>

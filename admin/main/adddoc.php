@@ -98,7 +98,7 @@
                 <div class="col-lg-8 col-xlg-9 col-md-7">
                         <div class="card"><!-- Tab panes -->
                             <div class="card-body">
-                                <form class="form-horizontal form-material" method="POST" action="php/adddocument.php">
+                              <form class="form-horizontal form-material" method="POST" action="php/adddocument.php" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <label class="col-md-12">Titre Document:</label>
                                         <div class="col-md-12">
@@ -128,7 +128,7 @@
                                                 <option>Cour</option>
                                                 <option>TD</option>
                                                 <option>TP</option>
-                                                <option>TP</option>
+  
                                                 <option>examen</option>
 
                                             </select>
@@ -145,24 +145,36 @@
                                             <input type="text" placeholder="exemple.com" name="lien" class="form-control form-control-line">
                                         </div>
                                        </br>
-                                    <div class="form-group">
-                                        <div class="col-sm-12">
-                                            <button class="btn btn-success" type="submit" >Ajouter</button>
-                                        </div>
-                                    </div>
-                                </form>
-                                    <div >
-                                  <form method="POST" enctype="multipart/form-data" action="php/upload.php">
+                                   
                                       
                                         <div class="form-group">
                                         <div class="col-sm-12"  >
-                                            <input  class="btn btn-success" type="file" name="file" style="padding-top: 0px;padding-bottom: 0px;">
-                                           
-                                             <button class="btn btn-success" type="submit" style="padding-top: 3px; padding-bottom:3px;">Ajouter</button>
+                                            <input  class="btn btn-success" type="file" name="file" style="padding :0px 0px;">
                                         </div>
                                     </div>
-                                 </form>  
-                                </div>
+                                     <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <button class="btn btn-success" type="submit"  style="padding:3px 15px" >Ajouter</button>
+                                        </div>
+                                    </div>
+                                 </form>   
+                                 <?php 
+                                /*   $files=scandir("C:/xampp/htdocs/Moussaouii/admin/main/php/docs");
+                                   print_r($files);
+                                  
+                                 ?>
+                                  <?php 
+                                   $files=scandir("C:/xampp/htdocs/Moussaouii/admin/main/php/docs");
+                                   for ($a=2; $a<count($files) ; $a++) { 
+                                     ?>
+                                     <p>
+                                     <a  style="padding: 0px 20px" class="col-sm-12"  download="docs/<?php echo $files[$a]?>" href="php/docs/<?php echo $files[$a]?>">telecharger <?php echo $files[$a] ?> </a>
+                                     </p>
+                                   <?php  
+                                 }*/
+                                 ?>
+
+
                             </div>
                         </div>
                     </div> <!-- End PAge Content -->

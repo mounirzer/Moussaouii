@@ -113,7 +113,7 @@ $row=mysqli_fetch_assoc($resultat);
                                     <div class="form-group">
                                         <label class="col-md-12">Titre Document:</label>
                                         <div class="col-md-12">
-                                            <input type="text" value="<?php echo $row["nom"] ?>" name="titre" class="form-control form-control-line">
+                                            <input type="text" value="<?php echo $row["nomdoc"] ?>" name="titre" class="form-control form-control-line">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -129,7 +129,7 @@ $row=mysqli_fetch_assoc($resultat);
                                     <div class="form-group">
                                         <label class="col-md-12">Module Document:</label>
                                         <div class="col-md-12">
-                                            <input type="text" value="<?php echo $row["module"] ?>" name="module" class="form-control form-control-line">
+                                            <input type="text" value="<?php echo $row["moduledoc"] ?>" name="module" class="form-control form-control-line">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -139,7 +139,6 @@ $row=mysqli_fetch_assoc($resultat);
                                                 <option>Cour</option>
                                                 <option>TD</option>
                                                 <option>TP</option>
-                                                <option>TP</option>
                                                 <option>examen</option>
 
                                             </select>
@@ -148,12 +147,12 @@ $row=mysqli_fetch_assoc($resultat);
                                     <div class="form-group">
                                         <label class="col-md-12">Résumer :</label>
                                         <div class="col-md-12">
-                                            <input rows="10" class="form-control form-control-line" name="resumer" value="<?php echo $row["resumer"] ?>"></input>
+                                            <input rows="10" class="form-control form-control-line" name="resumer" value="<?php echo $row["resumerdoc"] ?>"></input>
                                         </div>
                                     </div>
                                     <label class="col-md-12">Lien Document :</label>
                                         <div class="col-md-12">
-                                            <input type="text" value="<?php echo $row["lien"] ?>" name="lien" class="form-control form-control-line">
+                                            <input type="text" value="<?php echo $row["liendrivedoc"] ?>" name="lien" class="form-control form-control-line">
                                         </div>
                                        </br>
                                     <div class="form-group">
