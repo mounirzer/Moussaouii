@@ -1,6 +1,6 @@
 <?php
 session_start();
- if (!(isset($_SESSION ["username"]))) {header("location: ../main/login/login.php ");}
+ if (!(isset($_SESSION ["username"]))) {header("location: ../main/login/index.php ");}
 $conn=mysqli_connect('localhost','root','','siteweb');
 $resultat=mysqli_query($conn,'SELECT * FROM admin WHERE id=2');
 $row=mysqli_fetch_assoc($resultat);
@@ -231,6 +231,18 @@ $row=mysqli_fetch_assoc($resultat);
                                         </div>
                                     </div>
                                     <div class="form-group">
+                                        <label class="col-md-12">Adresse :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" name="adresse" value="<?php echo $row["adresse"]; ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">Télephone :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" name="phone" value="<?php echo $row["phone"]; ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
                                         <label class="col-md-12">Grade :</label>
                                         <div class="col-md-12">
                                             <input type="text" name="grade" value="<?php echo $row["grade"]; ?>" class="form-control form-control-line">
@@ -240,6 +252,30 @@ $row=mysqli_fetch_assoc($resultat);
                                         <label class="col-md-12">Secteur :</label>
                                         <div class="col-md-12">
                                             <input type="text" name="secteur" value="<?php echo $row["secteur"]; ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                     <div class="form-group">
+                                        <label class="col-md-12">Baccalaureat :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" name="baccalaureat" value="<?php echo $row["baccalaureat"]; ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                     <div class="form-group">
+                                        <label class="col-md-12">Ingeniorat :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" name="ingeniorat" value="<?php echo $row["ingeniorat"]; ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                     <div class="form-group">
+                                        <label class="col-md-12">Magistere :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" name="Magistere" value="<?php echo $row["Magistere"]; ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                     <div class="form-group">
+                                        <label class="col-md-12">Doctorat :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" name="Doctorat" value="<?php echo $row["Doctorat"]; ?>" class="form-control form-control-line">
                                         </div>
                                     </div>
                                     <div class="form-group">

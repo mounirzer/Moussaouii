@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="Utf8_generale_ci">
   <title>Moussaoui Boubaker</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
@@ -112,6 +112,15 @@
         <header class="section-header">
           <h3>À propos</h3>
         </header>
+          <?php
+   
+                $conn = mysqli_connect('localhost', 'root', '', 'siteweb');
+                    $result = mysqli_query($conn, 'SELECT * FROM admin' );
+           $row= mysqli_fetch_assoc($result);
+                if(mysqli_num_rows($result)>0){
+               
+                    ?>
+          
         <div class="row about-cols">
           <div class="col-md-4 wow fadeInUp">
             <div class="about-col">
@@ -119,9 +128,10 @@
                 <img src="img/about-mission.jpg" alt="" class="img-fluid">
                 <div class="icon"><i class="ion-ios-list-outline"></i></div>
               </div>
-              <h2 class="title">Our Mission</h2>
+              <h2 class="title">Information Generale </h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            MOUSSAOUI Boubakeur est un <?php echo $row['grade'];?>,dans l'universite de <?php echo $row['univ'];?>, il a eu son baccaloreat en <?php echo $row['baccalaureat'];?>et il a obtenue son diplome en informatique de l'universite de <?php echo $row['ingeniorat'];?>
+                  et son magister de l'universite de <?php echo $row['Magistere'];?>
               </p>
             </div>
           </div>
@@ -131,9 +141,9 @@
                 <img src="img/about-plan.jpg" alt="" class="img-fluid">
                 <div class="icon"><i class="ion-ios-list-outline"></i></div>
               </div>
-              <h2 class="title">Our Plan</h2>
+              <h2 class="title">Secteur De Travail </h2>
               <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                 MOUSSAOUI Boubakeur est un specialiste en <?php echo $row['secteur'];?>
               </p>
             </div>
           </div>
@@ -143,43 +153,46 @@
                 <img src="img/about-vision.jpg" alt="" class="img-fluid">
                 <div class="icon"><i class="ion-ios-list-outline"></i></div>
               </div>
-              <h2 class="title">Our Vision</h2>
+              <h2 class="title"> Domaine De Recherche </h2>
               <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+                MOUSSAOUI Boubakeur prepare sa these sur <?php echo $row['Doctorat'];?>
               </p>
             </div>
           </div>
         </div>
       </div>
-    </section><!-- #about -->
+    </section>
+      <?php
+                    
+                }  ?><!-- #about -->
     <!--==========================
       Skills Section
     ============================-->
     <section id="skills">
       <div class="container">
         <header class="section-header">
-          <h3>Our Skills</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+          <h3>Nos Competences </h3>
+          
         </header>
         <div class="skills-content">
           <div class="progress">
             <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">HTML <i class="val">100%</i></span>
+              <span class="skill">ns-3 Simulation  <i class="val">60%</i></span>
             </div>
           </div>
           <div class="progress">
             <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">CSS <i class="val">90%</i></span>
+              <span class="skill">Oracle <i class="val">40%</i></span>
             </div>
           </div>
           <div class="progress">
             <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">JavaScript <i class="val">75%</i></span>
+              <span class="skill">Packet Tracer Network <i class="val">70%</i></span>
             </div>
           </div>
           <div class="progress">
             <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">Photoshop <i class="val">55%</i></span>
+              <span class="skill">Sql Server <i class="val">50%</i></span>
             </div>
           </div>
         </div>
@@ -208,32 +221,36 @@
     <!--==========================
       Contact Section
     ============================-->
+      <?php
+    $con=mysqli_connect('localhost','root','','siteweb');
+    $resul=mysqli_query($con,'SELECT * FROM admin');
+        $row=mysqli_fetch_assoc($resul);
+    ?>
     <section id="contact" class="section-bg wow fadeInUp">
       <div class="container">
         <div class="section-header">
-          <h3>Contact Us</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <h3>Contact</h3>
         </div>
         <div class="row contact-info">
           <div class="col-md-4">
             <div class="contact-address">
               <i class="ion-ios-location-outline"></i>
-              <h3>Address</h3>
-              <address>A108 Adam Street, NY 535022, USA</address>
+              <h3>Adresse</h3>
+              <address><?php echo $row["adresse"] ?></address>
             </div>
           </div>
           <div class="col-md-4">
             <div class="contact-phone">
               <i class="ion-ios-telephone-outline"></i>
-              <h3>Phone Number</h3>
-              <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+              <h3>Télephone</h3>
+              <p><a href="tel:+155895548855"><?php echo $row["phone"] ?></a></p>
             </div>
           </div>
           <div class="col-md-4">
             <div class="contact-email">
               <i class="ion-ios-email-outline"></i>
               <h3>Email</h3>
-              <p><a href="mailto:info@example.com">info@example.com</a></p>
+              <p><a href="mailto:info@example.com"><?php echo $row["email"] ?></a></p>
             </div>
           </div>
         </div>

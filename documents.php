@@ -73,7 +73,11 @@ $resultcheck=mysqli_num_rows($resultat);
         <div class="row">
           <div class="col-lg-12">
             <ul id="portfolio-flters">
+<<<<<<< HEAD
               <li data-filter="*" class="filter-active"><a href="">All</a></li>
+=======
+              <li data-filter="*" class="filter-active">All</li>
+>>>>>>> 8d4778b0ac8b3676c7c53793d793ccd395eaa0de
               <?php 
       $sql2="SELECT DISTINCT moduledoc FROM support where typedoc!='article' ";
       $resultat2=mysqli_query($conn,$sql2);
