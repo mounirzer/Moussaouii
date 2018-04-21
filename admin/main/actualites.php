@@ -1,10 +1,6 @@
-
 <?php
 session_start();
  if (!(isset($_SESSION ["username"]))) {header("location: ../main/login/index.php ");}
-$conn=mysqli_connect('localhost','root','','siteweb');
-$resultat=mysqli_query($conn,'SELECT * FROM admin ');
-$row=mysqli_fetch_assoc($resultat);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -98,8 +94,7 @@ $row=mysqli_fetch_assoc($resultat);
                         <li class="nav-item dropdown u-pro">
                             <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="" /> <span class="hidden-md-down">Moussaoui Boubaker &nbsp;</span> </a>
                         </li>
-                    </ul>
-               
+                  </ul>
             </nav>
              </div>
         </header>
@@ -114,7 +109,7 @@ $row=mysqli_fetch_assoc($resultat);
             <div class="scroll-sidebar">
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
-                    <?php    
+                    <?php
                         include_once("aside.php");
                  ?>
                 </nav>
@@ -144,7 +139,6 @@ $row=mysqli_fetch_assoc($resultat);
                             <li class="breadcrumb-item active">Suprimer / Modifier</li>
                         </ol>
                     </div>
-
                 </div>
             </div>
                 <!-- ============================================================== -->
@@ -153,26 +147,20 @@ $row=mysqli_fetch_assoc($resultat);
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
-                
 <?php
 $i=0;
 $conn=mysqli_connect('localhost','root','','siteweb');
 $resultat=mysqli_query($conn,'SELECT * From actuallite ');
 ?>
-
                 <div class="row">
                     <!-- column -->
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Actualités</h4>
-
                                 <div class="table-responsive">
-
                                     <table class="table">
-
                                         <thead>
-
                                             <tr>
                                                 <th>#</th>
                                                 <th>Titre</th>
@@ -181,23 +169,18 @@ $resultat=mysqli_query($conn,'SELECT * From actuallite ');
                                                  <th>image</th>
                                             </tr>
                                         </thead>
-
-
                                         <tbody>
-                                            <?php  while($row=mysqli_fetch_assoc($resultat)){  ?> 
-                                            <tr>  
-
+                                            <?php  while($row=mysqli_fetch_assoc($resultat)){  ?>
+                                            <tr>
                                                 <td><?php $i=$i+1;  echo $i; ?></td>
-                                                <td><?php $i=1;  echo $row["titre"]; ?></td>
-                                                <td><?php $i=1;  echo $row["date"]; ?></td>
-                                                <td><?php $i=1;  echo $row["contenu"]; ?></td>
+                                                <td><?php $i=1;  echo $row["titreactua"]; ?></td>
+                                                <td><?php $i=1;  echo $row["dateactua"]; ?></td>
+                                                <td><?php $i=1;  echo $row["contenuactua"]; ?></td>
                                                 <td><?php $i=1;  echo $row["LienImage"]; ?></td>
-
                                                               <td> <div class="form-group" style="display: inline;" >
-                                    
                                         <div class="col-sm-12">
-                                            <a href="php/supactualite.php?id=<?php echo $row["id"]; ?>">Suprimer</a>
-                                            <a href="modactualite.php?id=<?php echo $row["id"] ;?>">Modifier</a>
+                                            <a href="php/supactualite.php?id=<?php echo $row["idactua"]; ?>">Suprimer</a>
+                                            <a href="modactualite.php?id=<?php echo $row["idactua"] ;?>">Modifier</a>
                                         </div>
                                     </div>
                                      </td>
@@ -214,7 +197,6 @@ $resultat=mysqli_query($conn,'SELECT * From actuallite ');
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
-        
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
@@ -230,15 +212,11 @@ $resultat=mysqli_query($conn,'SELECT * From actuallite ');
         <!-- End Page wrapper  -->
         <!-- ============================================================== -->
     </div>
-
     <!-- ============================================================== -->
     <!-- End Wrapper -->
     <!-- ============================================================== -->
     <!-- ============================================================== -->
     <!-- All Jquery -->
-
-
-
     <script src="../assets/node_modules/jquery/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="../assets/node_modules/bootstrap/js/popper.min.js"></script>

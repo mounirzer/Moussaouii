@@ -21,12 +21,6 @@
   <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
-  <!-- =======================================================
-    Theme Name: BizPage
-    Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
 </head>
 <body>
   <header id="header">
@@ -60,8 +54,8 @@
             <div class="carousel-background"><img src="localhost/<?php echo $row["LienImage"] ; ?>" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2><?php echo $row["titre"]; ?></h2>
-                    <p><?php echo $row["contenu"]; ?></p>
+                <h2><?php echo $row["titreactua"]; ?></h2>
+                    <p><?php echo $row["contenuactua"]; ?></p>
                 <!--a href="#featured-services" class="btn-get-started scrollto">Get Started</a-->
               </div>
             </div>
@@ -87,11 +81,11 @@
       $conn = mysqli_connect('localhost', 'root', '', 'siteweb');
     ?>
     <section id="featured-services">
-      <div class="container">     
+      <div class="container">
         <div class="row">
-        <?php 
+        <?php
                 $resul = mysqli_query($conn, 'SELECT DISTINCT module_annee FROM module' );
-          while ($ro= mysqli_fetch_assoc($resul)){?>         
+          while ($ro= mysqli_fetch_assoc($resul)){?>
           <div class="col-lg-4 box">
             <i class="ion-ios-bookmarks-outline"></i>
             <h4 class="title"><a href="documents.php?an=<?php echo $ro["module_annee"]; ?>"><?php echo $ro["module_annee"]; ?></a></h4>
@@ -108,13 +102,13 @@
         <header class="section-header">
           <h3>À propos</h3>
         </header>
-         <?php 
+         <?php
                     $result = mysqli_query($conn, 'SELECT * FROM admin' );
            $row= mysqli_fetch_assoc($result);
                 if(mysqli_num_rows($result)>0){
-               
+
                     ?>
-          
+
         <div class="row about-cols">
           <div class="col-md-4 wow fadeInUp">
             <div class="about-col">
@@ -157,7 +151,7 @@
       </div>
     </section>
       <?php
-                    
+
                 }  ?><!-- #about -->
     <!--==========================
       Skills Section
@@ -166,7 +160,7 @@
       <div class="container">
         <header class="section-header">
           <h3>Nos Competences </h3>
-          
+
         </header>
         <div class="skills-content">
           <div class="progress">
@@ -252,7 +246,7 @@
           <div id="sendmessage">Your message has been sent. Thank you!</div>
           <div id="errormessage"></div>
 
-      
+
           <form action="contact.php" method="POST">
             <div class="form-row">
               <div class="form-group col-md-6">
