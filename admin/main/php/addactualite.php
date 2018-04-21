@@ -4,7 +4,7 @@ $titre = $_POST["titre"];
 $contenu = $_POST["contenu"];
 $date = $_POST["date"];
 
-$directory = "admin/main/php/imageact/";
+$directory = "../../../imageact/";
 $file =  $directory.basename($_FILES["file"]["name"]);
 $pathparts = pathinfo($file);
 $ext =  $pathparts["extension"];

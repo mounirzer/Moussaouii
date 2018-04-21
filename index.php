@@ -52,9 +52,9 @@
       <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
           <ol class="carousel-indicators"></ol>
           <div class="carousel-inner" role="listbox">
-    <?php $con = mysqli_connect("localhost", "root", "", "siteweb");
+     <?php $con = mysqli_connect("localhost", "root", "", "siteweb");
      $sql = "SELECT * FROM actuallite";
-    $result = mysqli_query($con, $sql);$i=1;
+     $result = mysqli_query($con, $sql);$i=1;
      while($row = mysqli_fetch_assoc($result)){?>
           <div class="carousel-item <?php if ($i==1) {echo "active";}?>">
             <div class="carousel-background"><img src="localhost/<?php echo $row["LienImage"] ; ?>" alt=""></div>
@@ -171,22 +171,22 @@
         <div class="skills-content">
           <div class="progress">
             <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">ns-3 Simulation  <i class="val">60%</i></span>
+              <span class="skill">PACKET TRACER NETWORK<i class="val">70%</i></span>
             </div>
           </div>
           <div class="progress">
             <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">Oracle <i class="val">40%</i></span>
+              <span class="skill">NS-3 SIMULATION<i class="val">60%</i></span>
             </div>
           </div>
           <div class="progress">
             <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">Packet Tracer Network <i class="val">70%</i></span>
+              <span class="skill">SQL SERVER<i class="val">50%</i></span>
             </div>
           </div>
           <div class="progress">
             <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">Sql Server <i class="val">50%</i></span>
+              <span class="skill">ORACLE<i class="val">40%</i></span>
             </div>
           </div>
         </div>
@@ -237,21 +237,23 @@
             <div class="contact-phone">
               <i class="ion-ios-telephone-outline"></i>
               <h3>Télephone</h3>
-              <p><a href="tel:+155895548855"><?php echo $row["phone"] ?></a></p>
+              <p><a href="tel:<?php echo $row["phone"] ?>"><?php echo $row["phone"] ?></a></p>
             </div>
           </div>
           <div class="col-md-4">
             <div class="contact-email">
               <i class="ion-ios-email-outline"></i>
               <h3>Email</h3>
-              <p><a href="mailto:info@example.com"><?php echo $row["email"] ?></a></p>
+              <p><a href="mailto:<?php echo $row["email"] ?>"><?php echo $row["email"] ?></a></p>
             </div>
           </div>
         </div>
         <div class="form">
           <div id="sendmessage">Your message has been sent. Thank you!</div>
           <div id="errormessage"></div>
-          <form action="" method="post" role="form" class="contactForm">
+
+      
+          <form action="contact.php" method="POST">
             <div class="form-row">
               <div class="form-group col-md-6">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -270,8 +272,19 @@
               <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
               <div class="validation"></div>
             </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
+            <div><button type="submit">Envoyé</button></div>
           </form>
+
+
+
+
+
+
+
+
+
+
+
         </div>
       </div>
     </section><!-- #contact -->

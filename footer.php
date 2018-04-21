@@ -1,5 +1,9 @@
 <footer id="footer">
-    
+    <?php
+    $conn=mysqli_connect('localhost','root','','siteweb');
+    $result=mysqli_query($conn,'SELECT * FROM admin');
+    $row=mysqli_fetch_assoc($result);
+    ?>
     <div id="footerwrap">
 	 	<div class="container">
 		 	<div class="row">
@@ -33,4 +37,5 @@
 		 	</div><! --/row -->
 	 	</div><! --/container -->
 	 </div><! --/footerwrap -->
+
   </footer>
