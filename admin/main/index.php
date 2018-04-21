@@ -254,6 +254,30 @@ $row=mysqli_fetch_assoc($resultat);
                                             <input type="text" name="secteur" value="<?php echo $row["secteur"]; ?>" class="form-control form-control-line">
                                         </div>
                                     </div>
+                                     <div class="form-group">
+                                        <label class="col-md-12">Baccalaureat :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" name="baccalaureat" value="<?php echo $row["baccalaureat"]; ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                     <div class="form-group">
+                                        <label class="col-md-12">Ingeniorat :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" name="ingeniorat" value="<?php echo $row["ingeniorat"]; ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                     <div class="form-group">
+                                        <label class="col-md-12">Magistere :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" name="Magistere" value="<?php echo $row["Magistere"]; ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                     <div class="form-group">
+                                        <label class="col-md-12">Doctorat :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" name="Doctorat" value="<?php echo $row["Doctorat"]; ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
                                     <div class="form-group">
                                         <label class="col-md-12">Université :</label>
                                         <div class="col-md-12">
