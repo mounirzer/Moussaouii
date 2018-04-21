@@ -1,8 +1,8 @@
 <?php
 session_start();
- if (!(isset($_SESSION ["username"]))) {header("location: ../login.php ");}
+ if (!(isset($_SESSION ["username"]))) {header("location: ../main/login/login.php ");}
 $conn=mysqli_connect('localhost','root','','siteweb');
-$resultat=mysqli_query($conn,'SELECT * FROM admin WHERE id=1');
+$resultat=mysqli_query($conn,'SELECT * FROM admin WHERE id=2');
 $row=mysqli_fetch_assoc($resultat);
 ?>
 <!DOCTYPE html>
@@ -228,6 +228,18 @@ $row=mysqli_fetch_assoc($resultat);
                                         <label class="col-md-12">Lieu de Naissance :</label>
                                         <div class="col-md-12">
                                             <input type="text" name="lieu" value="<?php echo $row["lieu_de_n"]; ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">Adresse :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" name="adresse" value="<?php echo $row["adresse"]; ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">Télephone :</label>
+                                        <div class="col-md-12">
+                                            <input type="text" name="phone" value="<?php echo $row["phone"]; ?>" class="form-control form-control-line">
                                         </div>
                                     </div>
                                     <div class="form-group">

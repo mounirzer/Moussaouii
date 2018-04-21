@@ -91,8 +91,9 @@
                             <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="" /> <span class="hidden-md-down">Moussaoui Boubaker &nbsp;</span> </a>
                         </li>
                     </ul>
-                </div>
+               
             </nav>
+             </div>
         </header>
         <!-- ============================================================== -->
         <!-- End Topbar header -->
@@ -137,6 +138,7 @@
                     </div>
 
                 </div>
+            </div>
                 <!-- ============================================================== -->
                 <!-- End Bread crumb and right sidebar toggle -->
                 <!-- ============================================================== -->
@@ -168,30 +170,31 @@ $resultat=mysqli_query($conn,'SELECT * From actuallite ');
                                                 <th>Titre</th>
                                                 <th>Date</th>
                                                 <th>Contenu</th>
-                                                 <th>lien</th>
+                                                 <th>image</th>
                                             </tr>
                                         </thead>
 
 
                                         <tbody>
-                                            <?php  while($row=mysqli_fetch_assoc($resultat)){    ?>
-                                            <tr>
+                                            <?php  while($row=mysqli_fetch_assoc($resultat)){  ?> 
+                                            <tr>  
 
                                                 <td><?php $i=$i+1;  echo $i; ?></td>
                                                 <td><?php $i=1;  echo $row["titre"]; ?></td>
                                                 <td><?php $i=1;  echo $row["date"]; ?></td>
                                                 <td><?php $i=1;  echo $row["contenu"]; ?></td>
-                                                <td><?php $i=1;  echo $row["lien"]; ?></td>
+                                                <td><?php $i=1;  echo $row["LienImage"]; ?></td>
 
                                                               <td> <div class="form-group" style="display: inline;" >
                                     
                                         <div class="col-sm-12">
-                                            <a href="php/supactualite.php?id=<?php echo $row["id"] ?>">Suprimer</a>
-                                            <a href="modactualite.php?id=<?php echo $row["id"] ?>">Modifier</a>
+                                            <a href="php/supactualite.php?id=<?php echo $row["id"]; ?>">Suprimer</a>
+                                            <a href="modactualite.php?id=<?php echo $row["id"] ;?>">Modifier</a>
                                         </div>
-                                    </div> </td>
+                                    </div>
+                                     </td>
                                             </tr>
-                                        <?php    }     ?>
+                                  <?php }; ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -199,10 +202,11 @@ $resultat=mysqli_query($conn,'SELECT * From actuallite ');
                         </div>
                     </div>
                 </div>
+            </div>
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
-            </div>
+        
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
@@ -218,12 +222,15 @@ $resultat=mysqli_query($conn,'SELECT * From actuallite ');
         <!-- End Page wrapper  -->
         <!-- ============================================================== -->
     </div>
+
     <!-- ============================================================== -->
     <!-- End Wrapper -->
     <!-- ============================================================== -->
     <!-- ============================================================== -->
     <!-- All Jquery -->
-    <!-- ============================================================== -->
+
+
+
     <script src="../assets/node_modules/jquery/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="../assets/node_modules/bootstrap/js/popper.min.js"></script>
@@ -237,5 +244,4 @@ $resultat=mysqli_query($conn,'SELECT * From actuallite ');
     <!--Custom JavaScript -->
     <script src="js/custom.min.js"></script>
 </body>
-
 </html>
