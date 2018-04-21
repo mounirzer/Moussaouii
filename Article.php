@@ -71,7 +71,6 @@
                 while($row = mysqli_fetch_assoc($result)){
                     ?>
           <div class="col-lg-12 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
-            <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
               <h4 class="title"><a href= "<?php echo $row['lienart'];?>"><?php echo $row['titreart'];?></a> </h4>
                  <p class="description"><?php echo $row['resumeart']; ?></p>
                  
