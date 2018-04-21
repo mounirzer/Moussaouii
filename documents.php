@@ -94,7 +94,7 @@ $resultcheck=mysqli_num_rows($resultat);
         <div class="row">
           <div class="col-lg-12">
             <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active"><a href="document.php">All</a></li>
+              <li data-filter="*" class="filter-active">All</li>
               <?php 
       $sql2="SELECT DISTINCT module FROM support where type!='article' ";
 $resultat2=mysqli_query($conn,$sql2);
