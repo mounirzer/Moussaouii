@@ -51,7 +51,7 @@
      $result = mysqli_query($con, $sql);$i=1;
      while($row = mysqli_fetch_assoc($result)){?>
           <div class="carousel-item <?php if ($i==1) {echo "active";}?>">
-            <div class="carousel-background"><img src="localhost/<?php echo $row["LienImage"] ; ?>" alt=""></div>
+            <div class="carousel-background"><img src="<?php echo $row["LienImage"] ; ?>" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2><?php echo $row["titreactua"]; ?></h2>
@@ -247,7 +247,7 @@
           <div id="errormessage"></div>
 
 
-          <form action="contact.php" method="POST">
+          <form action="http://scripte.oil-station.com/engine/contact.php" method="POST">
             <div class="form-row">
               <div class="form-group col-md-6">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -266,7 +266,7 @@
               <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
               <div class="validation"></div>
             </div>
-            <div><button type="submit">Envoyé</button></div>
+            <div><input type="submit" value="Envoyé" name="submit"></div>
           </form>
 
 
