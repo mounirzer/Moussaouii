@@ -51,7 +51,7 @@
      $result = mysqli_query($con, $sql);$i=1;
      while($row = mysqli_fetch_assoc($result)){?>
           <div class="carousel-item <?php if ($i==1) {echo "active";}?>">
-            <div class="carousel-background"><img src="<?php echo $row["LienImage"] ; ?>" alt=""></div>
+            <div class="carousel-background"><img src="<?php echo substr($row["LienImage"],9) ; ?>" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2><?php echo $row["titreactua"]; ?></h2>
